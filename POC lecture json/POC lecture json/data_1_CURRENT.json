@@ -1,0 +1,44 @@
+{
+  "Questionnaire": [
+
+    {
+      "IdQuestionnaire": 1,
+      "Nom": "Questionnaire Pole Emploi",
+      "QuestionReponse": [
+        {
+          "IdQR": 1,
+          "LabelQuestion": "Quelle est la situation du client ?",
+          "IdPosition": 0
+        },
+        {
+          "IdQuestion": 2,
+          "LabelReponse": "LCR",
+          "LabelQuestionEnfant": "Quel est son type de contrat ?",
+          "IdPosition": 1,
+          "IdQRParent": 1
+        },
+        {
+          "IdQuestion": 3,
+          "LabelReponse": "Cdi",
+          "LabelQuestionEnfant": "Est-ce un cdi à temps partiel ou à temps plein ?",
+          "IdPosition": 2,
+          "IdQRParent": 2
+        },
+        {
+          "IdQuestion": 4,
+          "LabelReponse": "Cdd",
+          "LabelQuestionEnfant": "Quelle est la durée du contrat ?",
+          "IdPosition": 2,
+          "IdQRParent": 2
+        },
+        {
+          "IdQuestion": 5,
+          "LabelReponse": "Ctt",
+          "LabelQuestionEnfant": "Quelle est la durée du contrat ?",
+          "IdPosition": 2,
+          "IdQRParent": 2
+        }
+      ]
+    }
+  ]
+}
