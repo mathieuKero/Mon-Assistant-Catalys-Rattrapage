@@ -1,0 +1,90 @@
+﻿@page "/tree"
+@using Radzen
+@using POC_Radzen_Treeview.Data
+@using POC_Radzen_Treeview.Models
+
+<h3>TreeDemo</h3>
+
+<RadzenTree Data="@listTest" Expand="@OnExpand">
+    <RadzenTreeLevel TextProperty="Texte" />
+</RadzenTree>
+
+@code {
+
+    List<Category> listCat = null;
+    List<Reponse> listTest = null;
+
+    protected override void OnInitialized()
+    {
+        listCat = new List<Category>();
+        listTest = new List<Reponse>();
+
+        Category cat1 = new Category(1, "cat1");
+        Category cat2 = new Category(2, "cat2");
+        Category cat3 = new Category(3, "cat3");
+
+        List<Category> listCat1 = new List<Category>();
+        List<Category> listCat2 = new List<Category>();
+
+        listCat1.Add(cat1);
+        listCat1.Add(cat2);
+        listCat2.Add(cat3);
+
+        Category catGrp1 = new Category(1, "grpCat1", listCat1);
+
+        Category catGrp2 = new Category(2, "grpCat2", listCat2);
+
+        listCat.Add(catGrp1);
+        listCat.Add(catGrp2);
+
+        Question q1 = new Question(1, "produit_1", null, 1, new List<Reponse>());
+        Question q2 = new Question(2, "produit_2", null, 2, new List<Reponse>());
+        Question q3 = new Question(3, "produit_3", null, 3, new List<Reponse>());
+
+        Reponse r1 = new Reponse(1, "Accessoire_1");
+        Reponse r2 = new Reponse(2, "Accessoire_2");
+        Reponse r3 = new Reponse(3, "Accessoire_3");
+
+        q2.Reponses.Add(r2);
+        q3.Reponses.Add(r3);
+
+        r1.Question = q2;
+        r2.Question = q3;
+
+        q2.PreviousQuestion = q1;
+        q3.PreviousQuestion = q2;
+
+        listTest.Add(r1);
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+        var reponse = args.Value as Reponse;
+
+        List<Reponse> listRep = new List<Reponse>();
+
+        try
+        {
+            listRep = reponse.Question.Reponses;
+
+            args.Children.Data = listRep;
+            args.Children.TextProperty = "Texte";
+
+            foreach (Reponse rep in listRep)
+            {
+                if (rep.Question != null)
+                {
+                    args.Children.HasChildren = (Reponse) => true;
+                }
+            }
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+
+}
