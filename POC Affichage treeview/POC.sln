@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC_Radzen_Treeview", "POC_Radzen_Treeview\POC_Radzen_Treeview.csproj", "{DA81FB46-A667-46A7-B663-3BB061511949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA81FB46-A667-46A7-B663-3BB061511949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA81FB46-A667-46A7-B663-3BB061511949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA81FB46-A667-46A7-B663-3BB061511949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA81FB46-A667-46A7-B663-3BB061511949}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A69BDD5-2989-40C3-8883-F9708A927424}
+	EndGlobalSection
+EndGlobal
