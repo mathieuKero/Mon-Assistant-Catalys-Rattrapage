@@ -1,0 +1,490 @@
+{
+
+  "Nom": "Questionnaire Pole Emploi",
+  "IdQuestionnaire": 1,
+  "Questions": [
+    {
+      "IdQuestion": 1,
+      "Texte": "Quel est le type de presatation ?",
+      "IdReponseParent": 0,
+      "IdPosition": 0,
+      "Reponses": [
+        {
+          "Id": 101,
+          "Texte": "LCR"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 2,
+      "Texte": "Quelle est la situation du client ?",
+      "IdReponseParent": 101,
+      "IdPosition": 1,
+      "Reponses": [
+        {
+          "Id": 111,
+          "Texte": "Employé"
+        },
+        {
+          "Id": 113,
+          "Texte": "En formation"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 3,
+      "Texte": "Quel est son type de contrat ?",
+      "IdReponseParent": 111,
+      "IdPosition": 2,
+      "Reponses": [
+        {
+          "Id": 121,
+          "Texte": "Cdi"
+        },
+        {
+          "Id": 122,
+          "Texte": "Cdd"
+        },
+        {
+          "Id": 123,
+          "Texte": "Ctt"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 5,
+      "Texte": "Quelle est la région de sa formation ?",
+      "IdReponseParent": 113,
+      "IdPosition": 2,
+      "Reponses": [
+        {
+          "Id": 141,
+          "Texte": "BZH"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 6,
+      "Texte": "Quelle est la durée du contrat ?",
+      "IdReponseParent": 122,
+      "IdPosition": 3,
+      "Reponses": [
+        {
+          "Id": 151,
+          "Texte": "Plus de 6 mois"
+        },
+        {
+          "Id": 152,
+          "Texte": "Moins de 6 mois"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 7,
+      "Texte": "Quelle est la durée du contrat ?",
+      "IdReponseParent": 123,
+      "IdPosition": 3,
+      "Reponses": [
+        {
+          "Id": 161,
+          "Texte": "Plus de 6 mois"
+        },
+        {
+          "Id": 162,
+          "Texte": "Moins de 6 mois"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 8,
+      "Texte": "Un PSE existe-t-il ?",
+      "IdReponseParent": 141,
+      "IdPosition": 3,
+      "Reponses": [
+        {
+          "Id": 171,
+          "Texte": "Oui"
+        },
+        {
+          "Id": 172,
+          "Texte": "Non"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 9,
+      "Texte": "Est-ce un cdi à temps partiel ou à temps plein ?",
+      "IdReponseParent": 121,
+      "IdPosition": 4,
+      "Reponses": [
+        {
+          "Id": 181,
+          "Texte": "À temps partiel (78h)"
+        },
+        {
+          "Id": 182,
+          "Texte": "À temps plein"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 10,
+      "Texte": "Est-ce un cdd à temps partiel ou à temps plein ?",
+      "IdReponseParent": 151,
+      "IdPosition": 4,
+      "Reponses": [
+        {
+          "Id": 191,
+          "Texte": "À temps partiel (78h)"
+        },
+        {
+          "Id": 192,
+          "Texte": "À temps plein"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 11,
+      "Texte": "Est-ce un ctt à temps partiel ou à temps plein ?",
+      "IdReponseParent": 161,
+      "IdPosition": 4,
+      "Reponses": [
+        {
+          "Id": 201,
+          "Texte": "À temps partiel (78h)"
+        },
+        {
+          "Id": 202,
+          "Texte": "À temps plein"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 12,
+      "Texte": "Existe-t-il une prise en charge totale ?",
+      "IdReponseParent": 171,
+      "IdPosition": 4,
+      "Reponses": [
+        {
+          "Id": 211,
+          "Texte": "Oui"
+        },
+        {
+          "Id": 212,
+          "Texte": "Non"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 13,
+      "Texte": "Existe-t-il une prise en charge totale ?",
+      "IdReponseParent": 172,
+      "IdPosition": 4,
+      "Reponses": []
+    },
+    {
+      "IdQuestion": 14,
+      "Texte": "Quel est le nombre de jours de travail cumulés ?",
+      "IdReponseParent": 152,
+      "IdPosition": 5,
+      "Reponses": [
+        {
+          "Id": 231,
+          "Texte": "Pas de cumul 186 jours"
+        },
+        {
+          "Id": 232,
+          "Texte": "Plus de 186 jours"
+        },
+        {
+          "Id": 233,
+          "Texte": "Moins de 3 jours"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 15,
+      "Texte": "Quel est le nombre de jours de travail cumulés ?",
+      "IdReponseParent": 162,
+      "IdPosition": 5,
+      "Reponses": [
+        {
+          "Id": 241,
+          "Texte": "Pas de cumul 186 jours"
+        },
+        {
+          "Id": 242,
+          "Texte": "Plus de 186 jours"
+        },
+        {
+          "Id": 243,
+          "Texte": "Moins de 3 jours"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 16,
+      "Texte": "Est-il elligible au CPF ?",
+      "IdReponseParent": 211,
+      "IdPosition": 5,
+      "Reponses": []
+    },
+    {
+      "IdQuestion": 17,
+      "Texte": "Est-il elligible au CPF ?",
+      "IdReponseParent": 212,
+      "IdPosition": 5,
+      "Reponses": []
+    },
+    {
+      "IdQuestion": 18,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 181,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 271,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 272,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 19,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 182,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 281,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 282,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 20,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 191,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 291,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 292,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 21,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 192,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 301,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 302,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 22,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 231,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 311,
+          "Texte": "Avant le début du 7ème mois CSP"
+        },
+        {
+          "Id": 312,
+          "Texte": "Après le début du 7ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 23,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 201,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 321,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 322,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 24,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 202,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 331,
+          "Texte": "Avant le 10ème mois CSP"
+        },
+        {
+          "Id": 332,
+          "Texte": "Après le 10ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 25,
+      "Texte": "Contrat dans CSP ?",
+      "IdReponseParent": 241,
+      "IdPosition": 6,
+      "Reponses": [
+        {
+          "Id": 341,
+          "Texte": "Avant le début du 7ème mois CSP"
+        },
+        {
+          "Id": 342,
+          "Texte": "Après le début du 7ème mois CSP"
+        }
+      ]
+    },
+    {
+      "IdQuestion": 26,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "IdReponseParent": 271,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 27,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 272,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 28,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "IdReponseParent": 281,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 29,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 282,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 30,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
+      "IdReponseParent": 291,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 31,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 292,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 32,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
+      "IdReponseParent": 301,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 33,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 302,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 34,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <br> Sur TéO : compléter l'événement, importer le contrat dans 'document'",
+      "IdReponseParent": 311,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 35,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> La date de fin du CSP est reporté d'autant de jours travaillé dans un maximum de 3 mois",
+      "IdReponseParent": 312,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 36,
+      "Texte": "Au bout de 186 jours de période de travail cumulé, le CSP est rompu",
+      "IdReponseParent": 232,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 37,
+      "Texte": "Attention, le CSP est rompu",
+      "IdReponseParent": 233,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 38,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "IdReponseParent": 321,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 39,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 322,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 40,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Il faudra compléter l'attestation temps partiel choisi pour réaliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "IdReponseParent": 331,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 41,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point étape et FE <\br> Le De ne peut pas prétendre à la prime (mais il peut demander l'IDR si perte de salaire)",
+      "IdReponseParent": 332,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 42,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <br> Sur TéO : compléter l'événement, importer le contrat dans 'document'",
+      "IdReponseParent": 341,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 43,
+      "Texte": "Le contrat récupéré doit être signé des 2 parties et doit contenir toutes les pages précisant les dates, la durée horaire et les signatures <\br> Sur TéO : compléter l'événement, importer le contrat dans 'document' <\br> La date de fin du CSP est reporté d'autant de jours travaillé dans un maximum de 3 mois",
+      "IdReponseParent": 342,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 44,
+      "Texte": "Au bout de 186 jours de période de travail cumulé, le CSP est rompu",
+      "IdReponseParent": 242,
+      "IdPosition": 7
+    },
+    {
+      "IdQuestion": 45,
+      "Texte": "Attention, le CSP est rompu",
+      "IdReponseParent": 243,
+      "IdPosition": 7
+    }
+  ]
+    
+  
+}

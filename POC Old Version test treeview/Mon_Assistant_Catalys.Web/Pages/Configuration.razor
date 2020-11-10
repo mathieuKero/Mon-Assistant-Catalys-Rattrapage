@@ -1,0 +1,152 @@
+﻿@page "/configuration"
+@using Radzen
+@using Mon_Assistant_Catalys.Web.Models
+@using Mon_Assistant_Catalys.Web.Services
+
+<!-- h1>Page de configuration du questionnaire-->
+<div class="main">
+    <div class="row">
+        <div class="col-md-7">
+
+            <RadzenTree Data="@listTest" Expand="@OnExpand">
+                <RadzenTreeLevel TextProperty="Texte" />
+            </RadzenTree>
+
+        </div>
+        <div class="col-md-5">
+            <div id="questionnaireArbo">
+
+                <br />
+                <div class="question">
+                    <form action="">
+                        <table>
+                            <tr class="question">
+                                <td class="text">
+                                    <input class="question" value="text question" required="" />
+                                </td>
+                                <td class="button">
+                                    <button class="btn-update" type="submit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <input class="reponse" value="text reponse 1">
+                                </td>
+                                <td class="button">
+                                    <button class="btn-update" type="submit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                                <td class="button">
+                                    <button class="btn-delete" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <input class="reponse" value="text reponse 2">
+                                </td>
+                                <td class="button">
+                                    <button class="btn-update" type="submit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                                <td class="button">
+                                    <button class="btn-delete" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <input class="reponse" value="text reponse 3">
+                                </td>
+                                <td class="button">
+                                    <button class="btn-update" type="submit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                                <td class="button">
+                                    <button class="btn-delete" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="btn-add">
+                                    <button class="btn-add" type="submit">
+                                        + Ajouter une nouvelle réponse
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="btn-save">
+                                    <button class="btn-save" type="submit">
+                                        <i class="far fa-save"></i>
+                                        Sauvegarder
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
+    QuestionnaireService context = new QuestionnaireService();
+    List<Question> toDisplayQuestionnaire = new List<Question>();
+
+    List<Questionnaire> listQuestionnaire = null;
+    List<Question> listTest = null;
+
+    protected override void OnInitialized()
+    {
+        questionnaire = context.GetQuestionnaire();
+        context.displayTree(toDisplayQuestionnaire);
+
+        listQuestionnaire = new List<Questionnaire>();
+        listTest = new List<Question>();
+
+        
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+        var reponse = args.Value as Reponse;
+
+        List<Reponse> listRep = new List<Reponse>();
+
+        try
+        {
+            listRep = reponse.Question.Reponses;
+
+            args.Children.Data = listRep;
+            args.Children.TextProperty = "Texte";
+
+            foreach (Reponse rep in listRep)
+            {
+                if (rep.Question != null)
+                {
+                    args.Children.HasChildren = (Reponse) => true;
+                }
+            }
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+}
+
