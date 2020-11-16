@@ -47,7 +47,6 @@ namespace Mon_Assistant_Catalys.Web.Models
             string path = "Files\\data_1_CURRENT.json";
             Questionnaire questionnaire = new Questionnaire();
 
-
             // deserialize JSON directly from a file
             using (StreamReader file = File.OpenText(path))
             {
@@ -56,42 +55,20 @@ namespace Mon_Assistant_Catalys.Web.Models
                 questionnaire = (Questionnaire)serializer.Deserialize(file, typeof(Questionnaire));
             }
             return questionnaire;
-
         }
 
         /// <summary>
-        ///     
+        ///     Recherche d'une Question dans le questionnaire
         /// </summary>
         /// <param name="Id"></param>
-        public void FindData(int Id)
+        /*public Question FindQuestion(int Id)
         {
-
-       }
-
-        /// <summary>
-        ///     Edition d'une partie du questionnaire ( Question / Réponse )
-        /// </summary>
-        /// <param name="Id"></param>
-        public void EditData(int id)
-        {
-            /// Réflexion : Récupérer le json avec loaddata puis modifier ? ou alors modifier les données des classes puis mettre à jour le json à partir des classes ?
-            /// A VOIR
             Question question = new Question();
-            Reponse reponse = new Reponse();
-
-
-            if (question == null)
-            {
-                //reponse = .Questionnaire.Questions.Select(x => x.Reponses.FirstOrDefault(c => c.Id == id)).ToList().FirstOrDefault();
-            }
+            question = this.Questionnaire.Questions.Where(x => x.IdQuestion == Id).FirstOrDefault();
             
-
+            return question;
         }
-
-        public void AddData()
-        {
-
-        }
+        */
 
         #endregion
 

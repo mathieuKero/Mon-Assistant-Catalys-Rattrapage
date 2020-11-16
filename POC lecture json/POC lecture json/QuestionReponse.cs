@@ -5,7 +5,7 @@ using System.Text;
 
 namespace POC_lecture_json
 {
-    class QuestionReponse
+    public class QuestionReponse
     {
         #region Properties
 
@@ -26,6 +26,7 @@ namespace POC_lecture_json
 
         public QuestionReponse PreviousQuestion { get; set; }
 
+        [JsonProperty("Reponses")]
         public List<QuestionReponse> ListQuestionReponses { get; set; }
 
         #endregion

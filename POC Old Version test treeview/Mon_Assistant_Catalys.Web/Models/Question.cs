@@ -30,6 +30,7 @@ namespace Mon_Assistant_Catalys.Web.Models
         [JsonProperty("Reponses")]
         public List<Reponse> Reponses { get; set; }
 
+        [JsonIgnore]
         public Question PreviousQuestion { get; set; }
 
         #endregion
