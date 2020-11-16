@@ -3,12 +3,14 @@
 @using Mon_Assistant_Catalys.Web.Models
 @using Mon_Assistant_Catalys.Web.Services
 
+<meta charset="UTF-8">
+
 <!-- h1>Page de configuration du questionnaire-->
 <div class="main">
     <div class="row">
         <div class="col-md-7">
 
-            <RadzenTree Data="@listTest" Expand="@OnExpand">
+            <RadzenTree Data="@toDisplayTree" Expand="@OnExpand">
                 <RadzenTreeLevel TextProperty="Texte" />
             </RadzenTree>
 
@@ -105,45 +107,45 @@
     QuestionnaireService context = new QuestionnaireService();
     List<Question> toDisplayQuestionnaire = new List<Question>();
 
-    List<Questionnaire> listQuestionnaire = null;
-    List<Question> listTest = null;
+    List<Question> toDisplayTree = null;
 
     protected override void OnInitialized()
     {
         questionnaire = context.GetQuestionnaire();
-        context.displayTree(toDisplayQuestionnaire);
 
-        listQuestionnaire = new List<Questionnaire>();
-        listTest = new List<Question>();
+        toDisplayTree = new List<Question>();
 
-        
+        toDisplayTree = context.displayTree(toDisplayQuestionnaire);
     }
 
     void OnExpand(TreeExpandEventArgs args)
     {
-        var reponse = args.Value as Reponse;
+        Question currentQuestion = args.Value as Question;
 
-        List<Reponse> listRep = new List<Reponse>();
+        List<Question> listQuestion = new List<Question>();
 
         try
         {
-            listRep = reponse.Question.Reponses;
+            foreach (Reponse reponse in currentQuestion.Reponses)
+            {
+                listQuestion.Add(reponse.Question);
+            }
 
-            args.Children.Data = listRep;
+            args.Children.Data = listQuestion;
             args.Children.TextProperty = "Texte";
 
-            foreach (Reponse rep in listRep)
+            foreach (Question question in listQuestion)
             {
-                if (rep.Question != null)
+                if (question.Reponses == null)
                 {
-                    args.Children.HasChildren = (Reponse) => true;
+                    args.Children.HasChildren = (Reponse) => false;
                 }
             }
 
         }
         catch (Exception)
         {
-
+            //TODO add log messages
             throw;
         }
 
