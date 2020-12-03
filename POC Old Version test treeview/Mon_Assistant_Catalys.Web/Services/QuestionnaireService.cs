@@ -1,10 +1,8 @@
 ﻿using Mon_Assistant_Catalys.Web.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace Mon_Assistant_Catalys.Web.Services
 {
@@ -53,15 +51,18 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <param name="Id"></param>
         public void UpdateJsonFiles()
         {
+
             // On créer un fichier json à partir du questionnaire
             using (StreamWriter file = File.CreateText("Files\\data_1_CURRENT_TMP.json"))
             {
+                
                 JsonSerializer serializer = new JsonSerializer();
+                serializer.Formatting = Formatting.Indented;
 
                 //serialize object directly into file stream
                 serializer.Serialize(file, questionnaire);
             }
-            
+
             // TODO 
             // Formattage des fichiers différents => différences même si les fichiers contiennent les mêmes données !
 
@@ -84,8 +85,8 @@ namespace Mon_Assistant_Catalys.Web.Services
             else
             {
                 // Renommer les deux fichiers avec les suffixes correspondants
-                File.Move("Files\\data_1_CURRENT", "Files\\data_1_OLD.json");
-                File.Move("Files\\data_1_CURRENT_TMP", "Files\\data_1_CURRENT.json");
+                File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
+                File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
             }
 
         }
