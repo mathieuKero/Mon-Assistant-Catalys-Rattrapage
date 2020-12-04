@@ -1,8 +1,8 @@
 ﻿using Mon_Assistant_Catalys.Web.Models;
-
-using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 
 namespace Mon_Assistant_Catalys.Web.Services
 {
@@ -43,6 +43,52 @@ namespace Mon_Assistant_Catalys.Web.Services
             }
 
             return q;
+        }
+
+        /// <summary>
+        ///     Mise à jour des fichiers Json
+        /// </summary>
+        /// <param name="Id"></param>
+        public void UpdateJsonFiles()
+        {
+
+            // On créer un fichier json à partir du questionnaire
+            using (StreamWriter file = File.CreateText("Files\\data_1_CURRENT_TMP.json"))
+            {
+                
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Formatting = Formatting.Indented;
+
+                //serialize object directly into file stream
+                serializer.Serialize(file, questionnaire);
+            }
+
+            // TODO 
+            // Formattage des fichiers différents => différences même si les fichiers contiennent les mêmes données !
+
+            // On compare les deux fichiers JSON pour voir si des différences existent
+
+            string jsonText1 = File.ReadAllText("Files\\data_1_CURRENT_TMP.json");
+            string jsonText2 = File.ReadAllText("Files\\data_1_CURRENT.json");
+
+            JObject json1 = JObject.Parse(jsonText1);
+            JObject json2 = JObject.Parse(jsonText2);
+
+            bool areEqual = JToken.DeepEquals(json1, json2);
+
+            // Si aucune différence, le fichier nouvellement créé est supprimé
+            if (areEqual == true)
+            {
+                // Supprimer fichier _TMP
+                File.Delete("Files\\data_1_CURRENT_TMP.json");
+            }
+            else
+            {
+                // Renommer les deux fichiers avec les suffixes correspondants
+                File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
+                File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
+            }
+
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace POC_lecture_json
 {
-    class Reponse
+    public class Reponse
     {
         #region Properties
 

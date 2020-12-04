@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC_Blazor_Bot_Framework", "POC_Blazor_Bot_Framework\POC_Blazor_Bot_Framework.csproj", "{9931B777-4B36-44A3-A844-165FC1E80152}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC lecture json", "..\POC lecture json\POC lecture json\POC lecture json.csproj", "{12275CAC-41F6-4EDF-8C5D-6A8BDAD7B226}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9931B777-4B36-44A3-A844-165FC1E80152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9931B777-4B36-44A3-A844-165FC1E80152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9931B777-4B36-44A3-A844-165FC1E80152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12275CAC-41F6-4EDF-8C5D-6A8BDAD7B226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12275CAC-41F6-4EDF-8C5D-6A8BDAD7B226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12275CAC-41F6-4EDF-8C5D-6A8BDAD7B226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12275CAC-41F6-4EDF-8C5D-6A8BDAD7B226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
