@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mon_Assistant_Catalys.Unit_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mon_Assistant_Catalys.Bot", "Mon_Assistant_Catalys.Bot\Mon_Assistant_Catalys.Bot.csproj", "{9CFB9F17-D9E0-4CB1-884B-90B493A11817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mon_Assistant_Catalys_Tests", "Mon_Assistant_Catalys_Tests\Mon_Assistant_Catalys_Tests.csproj", "{F8FFE795-3D00-4304-AF8A-1464A5812E46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9CFB9F17-D9E0-4CB1-884B-90B493A11817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CFB9F17-D9E0-4CB1-884B-90B493A11817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CFB9F17-D9E0-4CB1-884B-90B493A11817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FFE795-3D00-4304-AF8A-1464A5812E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FFE795-3D00-4304-AF8A-1464A5812E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FFE795-3D00-4304-AF8A-1464A5812E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FFE795-3D00-4304-AF8A-1464A5812E46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
