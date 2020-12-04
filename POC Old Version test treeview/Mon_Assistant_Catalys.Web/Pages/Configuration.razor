@@ -16,7 +16,6 @@
 
         </div>
         <div class="col-md-5">
-
             @if (question.IdQuestion != 0)
             {
                 <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
@@ -44,11 +43,10 @@
                     </div>
                     <div class="col-12 row">
                         <span class="col-3"></span>
-                        <input type="submit" class="form-control col-6 btn-primary" value="Sauvegarder" />
+                        <input type="submit" class="form-control col-6 btn-primary" value="Sauvegarder" @onClick="OnExit"/>
                     </div>
                 </EditForm>
             }
-
         </div>
     </div>
 </div>
@@ -124,5 +122,12 @@
     {
         //context.SaveQuestion(question);
     }
+
+    void OnExit()
+    {
+        context.UpdateJsonFiles();
+    }
 }
+
+
 

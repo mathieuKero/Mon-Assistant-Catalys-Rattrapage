@@ -51,7 +51,6 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <param name="Id"></param>
         public void UpdateJsonFiles()
         {
-
             // On créer un fichier json à partir du questionnaire
             using (StreamWriter file = File.CreateText("Files\\data_1_CURRENT_TMP.json"))
             {
@@ -62,10 +61,7 @@ namespace Mon_Assistant_Catalys.Web.Services
                 //serialize object directly into file stream
                 serializer.Serialize(file, questionnaire);
             }
-
-            // TODO 
-            // Formattage des fichiers différents => différences même si les fichiers contiennent les mêmes données !
-
+            
             // On compare les deux fichiers JSON pour voir si des différences existent
 
             string jsonText1 = File.ReadAllText("Files\\data_1_CURRENT_TMP.json");
