@@ -52,6 +52,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         public void UpdateJsonFiles()
         {
 
+
             // On créer un fichier json à partir du questionnaire
             using (StreamWriter file = File.CreateText("Files\\data_1_CURRENT_TMP.json"))
             {
