@@ -86,7 +86,7 @@
                             </tr>
                             <tr>
                                 <td class="btn-save">
-                                    <button class="btn-save" type="submit">
+                                    <button class="btn-save" type="submit" @onclick="OnExit">
                                         <i class="far fa-save"></i>
                                         Sauvegarder
                                     </button>
@@ -148,5 +148,12 @@
         }
 
     }
+
+    void OnExit()
+    {
+        context.UpdateJsonFiles();
+    }
 }
+
+
 
