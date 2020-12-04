@@ -57,19 +57,6 @@ namespace Mon_Assistant_Catalys.Web.Models
             return questionnaire;
         }
 
-        /// <summary>
-        ///     Recherche d'une Question dans le questionnaire
-        /// </summary>
-        /// <param name="Id"></param>
-        /*public Question FindQuestion(int Id)
-        {
-            Question question = new Question();
-            question = this.Questionnaire.Questions.Where(x => x.IdQuestion == Id).FirstOrDefault();
-            
-            return question;
-        }
-        */
-
         #endregion
 
         
