@@ -10,98 +10,54 @@
     <div class="row">
         <div class="col-md-7">
 
-            <RadzenTree Data="@toDisplayTree" Expand="@OnExpand">
+            <RadzenTree Data="@toDisplayTree" Expand="@OnExpand" Change="@OnChange">
                 <RadzenTreeLevel TextProperty="Texte" />
             </RadzenTree>
 
         </div>
         <div class="col-md-5">
-            <div id="questionnaireArbo">
 
-                <br />
-                <div class="question">
-                    <form action="">
-                        <table>
-                            <tr class="question">
-                                <td class="text">
-                                    <input class="question" value="text question" required="" />
-                                </td>
-                                <td class="button">
-                                    <button class="btn-update" type="submit">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text">
-                                    <input class="reponse" value="text reponse 1">
-                                </td>
-                                <td class="button">
-                                    <button class="btn-update" type="submit">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                                <td class="button">
-                                    <button class="btn-delete" type="submit">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text">
-                                    <input class="reponse" value="text reponse 2">
-                                </td>
-                                <td class="button">
-                                    <button class="btn-update" type="submit">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                                <td class="button">
-                                    <button class="btn-delete" type="submit">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text">
-                                    <input class="reponse" value="text reponse 3">
-                                </td>
-                                <td class="button">
-                                    <button class="btn-update" type="submit">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                                <td class="button">
-                                    <button class="btn-delete" type="submit">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="btn-add">
-                                    <button class="btn-add" type="submit">
-                                        + Ajouter une nouvelle réponse
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="btn-save">
-                                    <button class="btn-save" type="submit">
-                                        <i class="far fa-save"></i>
-                                        Sauvegarder
-                                    </button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
+            @if (question.IdQuestion != 0)
+            {
+                <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
+                    <div class="col-12 row">
+                        <label class="col-2 font-weight-bold">Question</label>
+                        <InputText class="form-control col-10" @bind-Value="question.Texte" placeholder="Contenu de la question" />
+                    </div>
 
-            </div>
+                    @if (question.Reponses != null)
+                    {
+                        @foreach (var rep in question.Reponses)
+                        {
+                            <div class="col-12 row">
+                                <label class="col-2 font-weight-bold">Reponse</label>
+                                <InputText class="form-control col-9" @bind-Value="@rep.Texte" placeholder="Contenu de la reponse" />
+                                <input type="submit" class="form-control col-1 btn-primary" value="Suppr" />
+                            </div>
+                        }
+                    }
+
+                    <br />
+                    <div class="col-12 row">
+                        <span class="col-3"></span>
+                        <input type="submit" class="form-control col-6 btn-primary" value="Ajouter une reponse" />
+                    </div>
+                    <div class="col-12 row">
+                        <span class="col-3"></span>
+                        <input type="submit" class="form-control col-6 btn-primary" value="Sauvegarder" />
+                    </div>
+                </EditForm>
+            }
+
         </div>
     </div>
 </div>
 
 @code {
+    public Question question { get; set; }
+    public Reponse reponse { get; set; }
+
+    Question currentQuestion = null;
 
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
     QuestionnaireService context = new QuestionnaireService();
@@ -111,14 +67,26 @@
 
     protected override void OnInitialized()
     {
+        question = new Question();
+
         questionnaire = context.GetQuestionnaire();
 
         toDisplayTree = new List<Question>();
+
+        toDisplayTree = context.displayTree(toDisplayQuestionnaire);
+
+        foreach (var q in questionnaire.Questions)
+        {
+            if (q.IdQuestion == 1)
+            {
+                question = q;
+            }
+        }
     }
 
     void OnExpand(TreeExpandEventArgs args)
     {
-        Question currentQuestion = args.Value as Question;
+        currentQuestion = args.Value as Question;
 
         List<Question> listQuestion = new List<Question>();
 
@@ -139,14 +107,22 @@
                     args.Children.HasChildren = (Reponse) => false;
                 }
             }
-
         }
         catch (Exception)
         {
-            //TODO add log messages
+            //TODO add log message
             throw;
         }
+    }
 
+    void OnChange(TreeEventArgs args)
+    {
+        question = args.Value as Question;
+    }
+
+    private void SaveQuestion()
+    {
+        //context.SaveQuestion(question);
     }
 }
 

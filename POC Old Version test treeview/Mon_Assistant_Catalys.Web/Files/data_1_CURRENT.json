@@ -10,496 +10,7 @@
       "Reponses": [
         {
           "Id": 101,
-          "Texte": "LCR",
-          "Question": {
-            "IdQuestion": 2,
-            "Texte": "Quelle est la situation du client ?",
-            "IdReponseParent": 101,
-            "IdPosition": 1,
-            "Reponses": [
-              {
-                "Id": 111,
-                "Texte": "Employ�",
-                "Question": {
-                  "IdQuestion": 3,
-                  "Texte": "Quel est son type de contrat ?",
-                  "IdReponseParent": 111,
-                  "IdPosition": 2,
-                  "Reponses": [
-                    {
-                      "Id": 121,
-                      "Texte": "Cdi",
-                      "Question": {
-                        "IdQuestion": 9,
-                        "Texte": "Est-ce un cdi � temps partiel ou � temps plein ?",
-                        "IdReponseParent": 121,
-                        "IdPosition": 4,
-                        "Reponses": [
-                          {
-                            "Id": 181,
-                            "Texte": "� temps partiel (78h)",
-                            "Question": {
-                              "IdQuestion": 18,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 181,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 271,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 26,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                    "IdReponseParent": 271,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 272,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 27,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 272,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 182,
-                            "Texte": "� temps plein",
-                            "Question": {
-                              "IdQuestion": 19,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 182,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 281,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 28,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                    "IdReponseParent": 281,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 282,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 29,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 282,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 122,
-                      "Texte": "Cdd",
-                      "Question": {
-                        "IdQuestion": 6,
-                        "Texte": "Quelle est la dur�e du contrat ?",
-                        "IdReponseParent": 122,
-                        "IdPosition": 3,
-                        "Reponses": [
-                          {
-                            "Id": 151,
-                            "Texte": "Plus de 6 mois",
-                            "Question": {
-                              "IdQuestion": 10,
-                              "Texte": "Est-ce un cdd � temps partiel ou � temps plein ?",
-                              "IdReponseParent": 151,
-                              "IdPosition": 4,
-                              "Reponses": [
-                                {
-                                  "Id": 191,
-                                  "Texte": "� temps partiel (78h)",
-                                  "Question": {
-                                    "IdQuestion": 20,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 191,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 291,
-                                        "Texte": "Avant le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 30,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                                          "IdReponseParent": 291,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 292,
-                                        "Texte": "Apr�s le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 31,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                          "IdReponseParent": 292,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "Id": 192,
-                                  "Texte": "� temps plein",
-                                  "Question": {
-                                    "IdQuestion": 21,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 192,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 301,
-                                        "Texte": "Avant le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 32,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                                          "IdReponseParent": 301,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 302,
-                                        "Texte": "Apr�s le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 33,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                          "IdReponseParent": 302,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 152,
-                            "Texte": "Moins de 6 mois",
-                            "Question": {
-                              "IdQuestion": 14,
-                              "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                              "IdReponseParent": 152,
-                              "IdPosition": 5,
-                              "Reponses": [
-                                {
-                                  "Id": 231,
-                                  "Texte": "Pas de cumul 186 jours",
-                                  "Question": {
-                                    "IdQuestion": 22,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 231,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 311,
-                                        "Texte": "Avant le d�but du 7�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 34,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                                          "IdReponseParent": 311,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 312,
-                                        "Texte": "Apr�s le d�but du 7�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 35,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                                          "IdReponseParent": 312,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "Id": 232,
-                                  "Texte": "Plus de 186 jours",
-                                  "Question": {
-                                    "IdQuestion": 36,
-                                    "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                                    "IdReponseParent": 232,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 233,
-                                  "Texte": "Moins de 3 jours",
-                                  "Question": {
-                                    "IdQuestion": 37,
-                                    "Texte": "Attention, le CSP est rompu",
-                                    "IdReponseParent": 233,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 123,
-                      "Texte": "Ctt",
-                      "Question": {
-                        "IdQuestion": 7,
-                        "Texte": "Quelle est la dur�e du contrat ?",
-                        "IdReponseParent": 123,
-                        "IdPosition": 3,
-                        "Reponses": [
-                          {
-                            "Id": 161,
-                            "Texte": "Plus de 6 mois",
-                            "Question": {
-                              "IdQuestion": 11,
-                              "Texte": "Est-ce un ctt � temps partiel ou � temps plein ?",
-                              "IdReponseParent": 161,
-                              "IdPosition": 4,
-                              "Reponses": [
-                                {
-                                  "Id": 201,
-                                  "Texte": "� temps partiel (78h)",
-                                  "Question": {
-                                    "IdQuestion": 23,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 201,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 321,
-                                        "Texte": "Avant le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 38,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                          "IdReponseParent": 321,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 322,
-                                        "Texte": "Apr�s le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 39,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                          "IdReponseParent": 322,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "Id": 202,
-                                  "Texte": "� temps plein",
-                                  "Question": {
-                                    "IdQuestion": 24,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 202,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 331,
-                                        "Texte": "Avant le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 40,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                          "IdReponseParent": 331,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 332,
-                                        "Texte": "Apr�s le 10�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 41,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                          "IdReponseParent": 332,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 162,
-                            "Texte": "Moins de 6 mois",
-                            "Question": {
-                              "IdQuestion": 15,
-                              "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                              "IdReponseParent": 162,
-                              "IdPosition": 5,
-                              "Reponses": [
-                                {
-                                  "Id": 241,
-                                  "Texte": "Pas de cumul 186 jours",
-                                  "Question": {
-                                    "IdQuestion": 25,
-                                    "Texte": "Contrat dans CSP ?",
-                                    "IdReponseParent": 241,
-                                    "IdPosition": 6,
-                                    "Reponses": [
-                                      {
-                                        "Id": 341,
-                                        "Texte": "Avant le d�but du 7�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 42,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                                          "IdReponseParent": 341,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      },
-                                      {
-                                        "Id": 342,
-                                        "Texte": "Apr�s le d�but du 7�me mois CSP",
-                                        "Question": {
-                                          "IdQuestion": 43,
-                                          "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                                          "IdReponseParent": 342,
-                                          "IdPosition": 7,
-                                          "Reponses": null
-                                        }
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "Id": 242,
-                                  "Texte": "Plus de 186 jours",
-                                  "Question": {
-                                    "IdQuestion": 44,
-                                    "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                                    "IdReponseParent": 242,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 243,
-                                  "Texte": "Moins de 3 jours",
-                                  "Question": {
-                                    "IdQuestion": 45,
-                                    "Texte": "Attention, le CSP est rompu",
-                                    "IdReponseParent": 243,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 113,
-                "Texte": "En formation",
-                "Question": {
-                  "IdQuestion": 5,
-                  "Texte": "Quelle est la r�gion de sa formation ?",
-                  "IdReponseParent": 113,
-                  "IdPosition": 2,
-                  "Reponses": [
-                    {
-                      "Id": 141,
-                      "Texte": "BZH",
-                      "Question": {
-                        "IdQuestion": 8,
-                        "Texte": "Un PSE existe-t-il ?",
-                        "IdReponseParent": 141,
-                        "IdPosition": 3,
-                        "Reponses": [
-                          {
-                            "Id": 171,
-                            "Texte": "Oui",
-                            "Question": {
-                              "IdQuestion": 12,
-                              "Texte": "Existe-t-il une prise en charge totale ?",
-                              "IdReponseParent": 171,
-                              "IdPosition": 4,
-                              "Reponses": [
-                                {
-                                  "Id": 211,
-                                  "Texte": "Oui",
-                                  "Question": {
-                                    "IdQuestion": 16,
-                                    "Texte": "Est-il elligible au CPF ?",
-                                    "IdReponseParent": 211,
-                                    "IdPosition": 5,
-                                    "Reponses": []
-                                  }
-                                },
-                                {
-                                  "Id": 212,
-                                  "Texte": "Non",
-                                  "Question": {
-                                    "IdQuestion": 17,
-                                    "Texte": "Est-il elligible au CPF ?",
-                                    "IdReponseParent": 212,
-                                    "IdPosition": 5,
-                                    "Reponses": []
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 172,
-                            "Texte": "Non",
-                            "Question": {
-                              "IdQuestion": 13,
-                              "Texte": "Existe-t-il une prise en charge totale ?",
-                              "IdReponseParent": 172,
-                              "IdPosition": 4,
-                              "Reponses": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "LCR"
         }
       ]
     },
@@ -511,484 +22,11 @@
       "Reponses": [
         {
           "Id": 111,
-          "Texte": "Employ�",
-          "Question": {
-            "IdQuestion": 3,
-            "Texte": "Quel est son type de contrat ?",
-            "IdReponseParent": 111,
-            "IdPosition": 2,
-            "Reponses": [
-              {
-                "Id": 121,
-                "Texte": "Cdi",
-                "Question": {
-                  "IdQuestion": 9,
-                  "Texte": "Est-ce un cdi � temps partiel ou � temps plein ?",
-                  "IdReponseParent": 121,
-                  "IdPosition": 4,
-                  "Reponses": [
-                    {
-                      "Id": 181,
-                      "Texte": "� temps partiel (78h)",
-                      "Question": {
-                        "IdQuestion": 18,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 181,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 271,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 26,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                              "IdReponseParent": 271,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 272,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 27,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 272,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 182,
-                      "Texte": "� temps plein",
-                      "Question": {
-                        "IdQuestion": 19,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 182,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 281,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 28,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                              "IdReponseParent": 281,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 282,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 29,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 282,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 122,
-                "Texte": "Cdd",
-                "Question": {
-                  "IdQuestion": 6,
-                  "Texte": "Quelle est la dur�e du contrat ?",
-                  "IdReponseParent": 122,
-                  "IdPosition": 3,
-                  "Reponses": [
-                    {
-                      "Id": 151,
-                      "Texte": "Plus de 6 mois",
-                      "Question": {
-                        "IdQuestion": 10,
-                        "Texte": "Est-ce un cdd � temps partiel ou � temps plein ?",
-                        "IdReponseParent": 151,
-                        "IdPosition": 4,
-                        "Reponses": [
-                          {
-                            "Id": 191,
-                            "Texte": "� temps partiel (78h)",
-                            "Question": {
-                              "IdQuestion": 20,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 191,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 291,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 30,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                                    "IdReponseParent": 291,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 292,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 31,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 292,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 192,
-                            "Texte": "� temps plein",
-                            "Question": {
-                              "IdQuestion": 21,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 192,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 301,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 32,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                                    "IdReponseParent": 301,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 302,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 33,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 302,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 152,
-                      "Texte": "Moins de 6 mois",
-                      "Question": {
-                        "IdQuestion": 14,
-                        "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                        "IdReponseParent": 152,
-                        "IdPosition": 5,
-                        "Reponses": [
-                          {
-                            "Id": 231,
-                            "Texte": "Pas de cumul 186 jours",
-                            "Question": {
-                              "IdQuestion": 22,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 231,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 311,
-                                  "Texte": "Avant le d�but du 7�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 34,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                                    "IdReponseParent": 311,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 312,
-                                  "Texte": "Apr�s le d�but du 7�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 35,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                                    "IdReponseParent": 312,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 232,
-                            "Texte": "Plus de 186 jours",
-                            "Question": {
-                              "IdQuestion": 36,
-                              "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                              "IdReponseParent": 232,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 233,
-                            "Texte": "Moins de 3 jours",
-                            "Question": {
-                              "IdQuestion": 37,
-                              "Texte": "Attention, le CSP est rompu",
-                              "IdReponseParent": 233,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 123,
-                "Texte": "Ctt",
-                "Question": {
-                  "IdQuestion": 7,
-                  "Texte": "Quelle est la dur�e du contrat ?",
-                  "IdReponseParent": 123,
-                  "IdPosition": 3,
-                  "Reponses": [
-                    {
-                      "Id": 161,
-                      "Texte": "Plus de 6 mois",
-                      "Question": {
-                        "IdQuestion": 11,
-                        "Texte": "Est-ce un ctt � temps partiel ou � temps plein ?",
-                        "IdReponseParent": 161,
-                        "IdPosition": 4,
-                        "Reponses": [
-                          {
-                            "Id": 201,
-                            "Texte": "� temps partiel (78h)",
-                            "Question": {
-                              "IdQuestion": 23,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 201,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 321,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 38,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                    "IdReponseParent": 321,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 322,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 39,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 322,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 202,
-                            "Texte": "� temps plein",
-                            "Question": {
-                              "IdQuestion": 24,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 202,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 331,
-                                  "Texte": "Avant le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 40,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                                    "IdReponseParent": 331,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 332,
-                                  "Texte": "Apr�s le 10�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 41,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                                    "IdReponseParent": 332,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 162,
-                      "Texte": "Moins de 6 mois",
-                      "Question": {
-                        "IdQuestion": 15,
-                        "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                        "IdReponseParent": 162,
-                        "IdPosition": 5,
-                        "Reponses": [
-                          {
-                            "Id": 241,
-                            "Texte": "Pas de cumul 186 jours",
-                            "Question": {
-                              "IdQuestion": 25,
-                              "Texte": "Contrat dans CSP ?",
-                              "IdReponseParent": 241,
-                              "IdPosition": 6,
-                              "Reponses": [
-                                {
-                                  "Id": 341,
-                                  "Texte": "Avant le d�but du 7�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 42,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                                    "IdReponseParent": 341,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                },
-                                {
-                                  "Id": 342,
-                                  "Texte": "Apr�s le d�but du 7�me mois CSP",
-                                  "Question": {
-                                    "IdQuestion": 43,
-                                    "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                                    "IdReponseParent": 342,
-                                    "IdPosition": 7,
-                                    "Reponses": null
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "Id": 242,
-                            "Texte": "Plus de 186 jours",
-                            "Question": {
-                              "IdQuestion": 44,
-                              "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                              "IdReponseParent": 242,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 243,
-                            "Texte": "Moins de 3 jours",
-                            "Question": {
-                              "IdQuestion": 45,
-                              "Texte": "Attention, le CSP est rompu",
-                              "IdReponseParent": 243,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Employe"
         },
         {
           "Id": 113,
-          "Texte": "En formation",
-          "Question": {
-            "IdQuestion": 5,
-            "Texte": "Quelle est la r�gion de sa formation ?",
-            "IdReponseParent": 113,
-            "IdPosition": 2,
-            "Reponses": [
-              {
-                "Id": 141,
-                "Texte": "BZH",
-                "Question": {
-                  "IdQuestion": 8,
-                  "Texte": "Un PSE existe-t-il ?",
-                  "IdReponseParent": 141,
-                  "IdPosition": 3,
-                  "Reponses": [
-                    {
-                      "Id": 171,
-                      "Texte": "Oui",
-                      "Question": {
-                        "IdQuestion": 12,
-                        "Texte": "Existe-t-il une prise en charge totale ?",
-                        "IdReponseParent": 171,
-                        "IdPosition": 4,
-                        "Reponses": [
-                          {
-                            "Id": 211,
-                            "Texte": "Oui",
-                            "Question": {
-                              "IdQuestion": 16,
-                              "Texte": "Est-il elligible au CPF ?",
-                              "IdReponseParent": 211,
-                              "IdPosition": 5,
-                              "Reponses": []
-                            }
-                          },
-                          {
-                            "Id": 212,
-                            "Texte": "Non",
-                            "Question": {
-                              "IdQuestion": 17,
-                              "Texte": "Est-il elligible au CPF ?",
-                              "IdReponseParent": 212,
-                              "IdPosition": 5,
-                              "Reponses": []
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 172,
-                      "Texte": "Non",
-                      "Question": {
-                        "IdQuestion": 13,
-                        "Texte": "Existe-t-il une prise en charge totale ?",
-                        "IdReponseParent": 172,
-                        "IdPosition": 4,
-                        "Reponses": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "En formation"
         }
       ]
     },
@@ -1000,780 +38,59 @@
       "Reponses": [
         {
           "Id": 121,
-          "Texte": "Cdi",
-          "Question": {
-            "IdQuestion": 9,
-            "Texte": "Est-ce un cdi � temps partiel ou � temps plein ?",
-            "IdReponseParent": 121,
-            "IdPosition": 4,
-            "Reponses": [
-              {
-                "Id": 181,
-                "Texte": "� temps partiel (78h)",
-                "Question": {
-                  "IdQuestion": 18,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 181,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 271,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 26,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                        "IdReponseParent": 271,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 272,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 27,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 272,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 182,
-                "Texte": "� temps plein",
-                "Question": {
-                  "IdQuestion": 19,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 182,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 281,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 28,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                        "IdReponseParent": 281,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 282,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 29,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 282,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Cdi"
         },
         {
           "Id": 122,
-          "Texte": "Cdd",
-          "Question": {
-            "IdQuestion": 6,
-            "Texte": "Quelle est la dur�e du contrat ?",
-            "IdReponseParent": 122,
-            "IdPosition": 3,
-            "Reponses": [
-              {
-                "Id": 151,
-                "Texte": "Plus de 6 mois",
-                "Question": {
-                  "IdQuestion": 10,
-                  "Texte": "Est-ce un cdd � temps partiel ou � temps plein ?",
-                  "IdReponseParent": 151,
-                  "IdPosition": 4,
-                  "Reponses": [
-                    {
-                      "Id": 191,
-                      "Texte": "� temps partiel (78h)",
-                      "Question": {
-                        "IdQuestion": 20,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 191,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 291,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 30,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                              "IdReponseParent": 291,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 292,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 31,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 292,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 192,
-                      "Texte": "� temps plein",
-                      "Question": {
-                        "IdQuestion": 21,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 192,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 301,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 32,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                              "IdReponseParent": 301,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 302,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 33,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 302,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 152,
-                "Texte": "Moins de 6 mois",
-                "Question": {
-                  "IdQuestion": 14,
-                  "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                  "IdReponseParent": 152,
-                  "IdPosition": 5,
-                  "Reponses": [
-                    {
-                      "Id": 231,
-                      "Texte": "Pas de cumul 186 jours",
-                      "Question": {
-                        "IdQuestion": 22,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 231,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 311,
-                            "Texte": "Avant le d�but du 7�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 34,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                              "IdReponseParent": 311,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 312,
-                            "Texte": "Apr�s le d�but du 7�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 35,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                              "IdReponseParent": 312,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 232,
-                      "Texte": "Plus de 186 jours",
-                      "Question": {
-                        "IdQuestion": 36,
-                        "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                        "IdReponseParent": 232,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 233,
-                      "Texte": "Moins de 3 jours",
-                      "Question": {
-                        "IdQuestion": 37,
-                        "Texte": "Attention, le CSP est rompu",
-                        "IdReponseParent": 233,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Cdd"
         },
         {
           "Id": 123,
-          "Texte": "Ctt",
-          "Question": {
-            "IdQuestion": 7,
-            "Texte": "Quelle est la dur�e du contrat ?",
-            "IdReponseParent": 123,
-            "IdPosition": 3,
-            "Reponses": [
-              {
-                "Id": 161,
-                "Texte": "Plus de 6 mois",
-                "Question": {
-                  "IdQuestion": 11,
-                  "Texte": "Est-ce un ctt � temps partiel ou � temps plein ?",
-                  "IdReponseParent": 161,
-                  "IdPosition": 4,
-                  "Reponses": [
-                    {
-                      "Id": 201,
-                      "Texte": "� temps partiel (78h)",
-                      "Question": {
-                        "IdQuestion": 23,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 201,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 321,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 38,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                              "IdReponseParent": 321,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 322,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 39,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 322,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 202,
-                      "Texte": "� temps plein",
-                      "Question": {
-                        "IdQuestion": 24,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 202,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 331,
-                            "Texte": "Avant le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 40,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                              "IdReponseParent": 331,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 332,
-                            "Texte": "Apr�s le 10�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 41,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                              "IdReponseParent": 332,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 162,
-                "Texte": "Moins de 6 mois",
-                "Question": {
-                  "IdQuestion": 15,
-                  "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-                  "IdReponseParent": 162,
-                  "IdPosition": 5,
-                  "Reponses": [
-                    {
-                      "Id": 241,
-                      "Texte": "Pas de cumul 186 jours",
-                      "Question": {
-                        "IdQuestion": 25,
-                        "Texte": "Contrat dans CSP ?",
-                        "IdReponseParent": 241,
-                        "IdPosition": 6,
-                        "Reponses": [
-                          {
-                            "Id": 341,
-                            "Texte": "Avant le d�but du 7�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 42,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                              "IdReponseParent": 341,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          },
-                          {
-                            "Id": 342,
-                            "Texte": "Apr�s le d�but du 7�me mois CSP",
-                            "Question": {
-                              "IdQuestion": 43,
-                              "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                              "IdReponseParent": 342,
-                              "IdPosition": 7,
-                              "Reponses": null
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "Id": 242,
-                      "Texte": "Plus de 186 jours",
-                      "Question": {
-                        "IdQuestion": 44,
-                        "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                        "IdReponseParent": 242,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 243,
-                      "Texte": "Moins de 3 jours",
-                      "Question": {
-                        "IdQuestion": 45,
-                        "Texte": "Attention, le CSP est rompu",
-                        "IdReponseParent": 243,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Ctt"
         }
       ]
     },
     {
       "IdQuestion": 5,
-      "Texte": "Quelle est la r�gion de sa formation ?",
+      "Texte": "Quelle est la region de sa formation ?",
       "IdReponseParent": 113,
       "IdPosition": 2,
       "Reponses": [
         {
           "Id": 141,
-          "Texte": "BZH",
-          "Question": {
-            "IdQuestion": 8,
-            "Texte": "Un PSE existe-t-il ?",
-            "IdReponseParent": 141,
-            "IdPosition": 3,
-            "Reponses": [
-              {
-                "Id": 171,
-                "Texte": "Oui",
-                "Question": {
-                  "IdQuestion": 12,
-                  "Texte": "Existe-t-il une prise en charge totale ?",
-                  "IdReponseParent": 171,
-                  "IdPosition": 4,
-                  "Reponses": [
-                    {
-                      "Id": 211,
-                      "Texte": "Oui",
-                      "Question": {
-                        "IdQuestion": 16,
-                        "Texte": "Est-il elligible au CPF ?",
-                        "IdReponseParent": 211,
-                        "IdPosition": 5,
-                        "Reponses": []
-                      }
-                    },
-                    {
-                      "Id": 212,
-                      "Texte": "Non",
-                      "Question": {
-                        "IdQuestion": 17,
-                        "Texte": "Est-il elligible au CPF ?",
-                        "IdReponseParent": 212,
-                        "IdPosition": 5,
-                        "Reponses": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 172,
-                "Texte": "Non",
-                "Question": {
-                  "IdQuestion": 13,
-                  "Texte": "Existe-t-il une prise en charge totale ?",
-                  "IdReponseParent": 172,
-                  "IdPosition": 4,
-                  "Reponses": []
-                }
-              }
-            ]
-          }
+          "Texte": "BZH"
         }
       ]
     },
     {
       "IdQuestion": 6,
-      "Texte": "Quelle est la dur�e du contrat ?",
+      "Texte": "Quelle est la duree du contrat ?",
       "IdReponseParent": 122,
       "IdPosition": 3,
       "Reponses": [
         {
           "Id": 151,
-          "Texte": "Plus de 6 mois",
-          "Question": {
-            "IdQuestion": 10,
-            "Texte": "Est-ce un cdd � temps partiel ou � temps plein ?",
-            "IdReponseParent": 151,
-            "IdPosition": 4,
-            "Reponses": [
-              {
-                "Id": 191,
-                "Texte": "� temps partiel (78h)",
-                "Question": {
-                  "IdQuestion": 20,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 191,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 291,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 30,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                        "IdReponseParent": 291,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 292,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 31,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 292,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 192,
-                "Texte": "� temps plein",
-                "Question": {
-                  "IdQuestion": 21,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 192,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 301,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 32,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                        "IdReponseParent": 301,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 302,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 33,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 302,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Plus de 6 mois"
         },
         {
           "Id": 152,
-          "Texte": "Moins de 6 mois",
-          "Question": {
-            "IdQuestion": 14,
-            "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-            "IdReponseParent": 152,
-            "IdPosition": 5,
-            "Reponses": [
-              {
-                "Id": 231,
-                "Texte": "Pas de cumul 186 jours",
-                "Question": {
-                  "IdQuestion": 22,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 231,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 311,
-                      "Texte": "Avant le d�but du 7�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 34,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                        "IdReponseParent": 311,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 312,
-                      "Texte": "Apr�s le d�but du 7�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 35,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                        "IdReponseParent": 312,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 232,
-                "Texte": "Plus de 186 jours",
-                "Question": {
-                  "IdQuestion": 36,
-                  "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                  "IdReponseParent": 232,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 233,
-                "Texte": "Moins de 3 jours",
-                "Question": {
-                  "IdQuestion": 37,
-                  "Texte": "Attention, le CSP est rompu",
-                  "IdReponseParent": 233,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "Moins de 6 mois"
         }
       ]
     },
     {
       "IdQuestion": 7,
-      "Texte": "Quelle est la dur�e du contrat ?",
+      "Texte": "Quelle est la duree du contrat ?",
       "IdReponseParent": 123,
       "IdPosition": 3,
       "Reponses": [
         {
           "Id": 161,
-          "Texte": "Plus de 6 mois",
-          "Question": {
-            "IdQuestion": 11,
-            "Texte": "Est-ce un ctt � temps partiel ou � temps plein ?",
-            "IdReponseParent": 161,
-            "IdPosition": 4,
-            "Reponses": [
-              {
-                "Id": 201,
-                "Texte": "� temps partiel (78h)",
-                "Question": {
-                  "IdQuestion": 23,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 201,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 321,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 38,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                        "IdReponseParent": 321,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 322,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 39,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 322,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 202,
-                "Texte": "� temps plein",
-                "Question": {
-                  "IdQuestion": 24,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 202,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 331,
-                      "Texte": "Avant le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 40,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                        "IdReponseParent": 331,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 332,
-                      "Texte": "Apr�s le 10�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 41,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                        "IdReponseParent": 332,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "Texte": "Plus de 6 mois"
         },
         {
           "Id": 162,
-          "Texte": "Moins de 6 mois",
-          "Question": {
-            "IdQuestion": 15,
-            "Texte": "Quel est le nombre de jours de travail cumul�s ?",
-            "IdReponseParent": 162,
-            "IdPosition": 5,
-            "Reponses": [
-              {
-                "Id": 241,
-                "Texte": "Pas de cumul 186 jours",
-                "Question": {
-                  "IdQuestion": 25,
-                  "Texte": "Contrat dans CSP ?",
-                  "IdReponseParent": 241,
-                  "IdPosition": 6,
-                  "Reponses": [
-                    {
-                      "Id": 341,
-                      "Texte": "Avant le d�but du 7�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 42,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                        "IdReponseParent": 341,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    },
-                    {
-                      "Id": 342,
-                      "Texte": "Apr�s le d�but du 7�me mois CSP",
-                      "Question": {
-                        "IdQuestion": 43,
-                        "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                        "IdReponseParent": 342,
-                        "IdPosition": 7,
-                        "Reponses": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "Id": 242,
-                "Texte": "Plus de 186 jours",
-                "Question": {
-                  "IdQuestion": 44,
-                  "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-                  "IdReponseParent": 242,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 243,
-                "Texte": "Moins de 3 jours",
-                "Question": {
-                  "IdQuestion": 45,
-                  "Texte": "Attention, le CSP est rompu",
-                  "IdReponseParent": 243,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "Moins de 6 mois"
         }
       ]
     },
@@ -1785,276 +102,59 @@
       "Reponses": [
         {
           "Id": 171,
-          "Texte": "Oui",
-          "Question": {
-            "IdQuestion": 12,
-            "Texte": "Existe-t-il une prise en charge totale ?",
-            "IdReponseParent": 171,
-            "IdPosition": 4,
-            "Reponses": [
-              {
-                "Id": 211,
-                "Texte": "Oui",
-                "Question": {
-                  "IdQuestion": 16,
-                  "Texte": "Est-il elligible au CPF ?",
-                  "IdReponseParent": 211,
-                  "IdPosition": 5,
-                  "Reponses": []
-                }
-              },
-              {
-                "Id": 212,
-                "Texte": "Non",
-                "Question": {
-                  "IdQuestion": 17,
-                  "Texte": "Est-il elligible au CPF ?",
-                  "IdReponseParent": 212,
-                  "IdPosition": 5,
-                  "Reponses": []
-                }
-              }
-            ]
-          }
+          "Texte": "Oui"
         },
         {
           "Id": 172,
-          "Texte": "Non",
-          "Question": {
-            "IdQuestion": 13,
-            "Texte": "Existe-t-il une prise en charge totale ?",
-            "IdReponseParent": 172,
-            "IdPosition": 4,
-            "Reponses": []
-          }
+          "Texte": "Non"
         }
       ]
     },
     {
       "IdQuestion": 9,
-      "Texte": "Est-ce un cdi � temps partiel ou � temps plein ?",
+      "Texte": "Est-ce un cdi a temps partiel ou a temps plein ?",
       "IdReponseParent": 121,
       "IdPosition": 4,
       "Reponses": [
         {
           "Id": 181,
-          "Texte": "� temps partiel (78h)",
-          "Question": {
-            "IdQuestion": 18,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 181,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 271,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 26,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                  "IdReponseParent": 271,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 272,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 27,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 272,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps partiel (78h)"
         },
         {
           "Id": 182,
-          "Texte": "� temps plein",
-          "Question": {
-            "IdQuestion": 19,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 182,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 281,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 28,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                  "IdReponseParent": 281,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 282,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 29,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 282,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps plein"
         }
       ]
     },
     {
       "IdQuestion": 10,
-      "Texte": "Est-ce un cdd � temps partiel ou � temps plein ?",
+      "Texte": "Est-ce un cdd a temps partiel ou a temps plein ?",
       "IdReponseParent": 151,
       "IdPosition": 4,
       "Reponses": [
         {
           "Id": 191,
-          "Texte": "� temps partiel (78h)",
-          "Question": {
-            "IdQuestion": 20,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 191,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 291,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 30,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                  "IdReponseParent": 291,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 292,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 31,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 292,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps partiel (78h)"
         },
         {
           "Id": 192,
-          "Texte": "� temps plein",
-          "Question": {
-            "IdQuestion": 21,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 192,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 301,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 32,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-                  "IdReponseParent": 301,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 302,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 33,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 302,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps plein"
         }
       ]
     },
     {
       "IdQuestion": 11,
-      "Texte": "Est-ce un ctt � temps partiel ou � temps plein ?",
+      "Texte": "Est-ce un ctt a temps partiel ou a temps plein ?",
       "IdReponseParent": 161,
       "IdPosition": 4,
       "Reponses": [
         {
           "Id": 201,
-          "Texte": "� temps partiel (78h)",
-          "Question": {
-            "IdQuestion": 23,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 201,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 321,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 38,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                  "IdReponseParent": 321,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 322,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 39,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 322,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps partiel (78h)"
         },
         {
           "Id": 202,
-          "Texte": "� temps plein",
-          "Question": {
-            "IdQuestion": 24,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 202,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 331,
-                "Texte": "Avant le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 40,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-                  "IdReponseParent": 331,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 332,
-                "Texte": "Apr�s le 10�me mois CSP",
-                "Question": {
-                  "IdQuestion": 41,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-                  "IdReponseParent": 332,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "a temps plein"
         }
       ]
     },
@@ -2066,25 +166,11 @@
       "Reponses": [
         {
           "Id": 211,
-          "Texte": "Oui",
-          "Question": {
-            "IdQuestion": 16,
-            "Texte": "Est-il elligible au CPF ?",
-            "IdReponseParent": 211,
-            "IdPosition": 5,
-            "Reponses": []
-          }
+          "Texte": "Oui"
         },
         {
           "Id": 212,
-          "Texte": "Non",
-          "Question": {
-            "IdQuestion": 17,
-            "Texte": "Est-il elligible au CPF ?",
-            "IdReponseParent": 212,
-            "IdPosition": 5,
-            "Reponses": []
-          }
+          "Texte": "Non"
         }
       ]
     },
@@ -2097,129 +183,41 @@
     },
     {
       "IdQuestion": 14,
-      "Texte": "Quel est le nombre de jours de travail cumul�s ?",
+      "Texte": "Quel est le nombre de jours de travail cumules ?",
       "IdReponseParent": 152,
       "IdPosition": 5,
       "Reponses": [
         {
           "Id": 231,
-          "Texte": "Pas de cumul 186 jours",
-          "Question": {
-            "IdQuestion": 22,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 231,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 311,
-                "Texte": "Avant le d�but du 7�me mois CSP",
-                "Question": {
-                  "IdQuestion": 34,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                  "IdReponseParent": 311,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 312,
-                "Texte": "Apr�s le d�but du 7�me mois CSP",
-                "Question": {
-                  "IdQuestion": 35,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                  "IdReponseParent": 312,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "Pas de cumul 186 jours"
         },
         {
           "Id": 232,
-          "Texte": "Plus de 186 jours",
-          "Question": {
-            "IdQuestion": 36,
-            "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-            "IdReponseParent": 232,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Plus de 186 jours"
         },
         {
           "Id": 233,
-          "Texte": "Moins de 3 jours",
-          "Question": {
-            "IdQuestion": 37,
-            "Texte": "Attention, le CSP est rompu",
-            "IdReponseParent": 233,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Moins de 3 jours"
         }
       ]
     },
     {
       "IdQuestion": 15,
-      "Texte": "Quel est le nombre de jours de travail cumul�s ?",
+      "Texte": "Quel est le nombre de jours de travail cumules ?",
       "IdReponseParent": 162,
       "IdPosition": 5,
       "Reponses": [
         {
           "Id": 241,
-          "Texte": "Pas de cumul 186 jours",
-          "Question": {
-            "IdQuestion": 25,
-            "Texte": "Contrat dans CSP ?",
-            "IdReponseParent": 241,
-            "IdPosition": 6,
-            "Reponses": [
-              {
-                "Id": 341,
-                "Texte": "Avant le d�but du 7�me mois CSP",
-                "Question": {
-                  "IdQuestion": 42,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-                  "IdReponseParent": 341,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              },
-              {
-                "Id": 342,
-                "Texte": "Apr�s le d�but du 7�me mois CSP",
-                "Question": {
-                  "IdQuestion": 43,
-                  "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-                  "IdReponseParent": 342,
-                  "IdPosition": 7,
-                  "Reponses": null
-                }
-              }
-            ]
-          }
+          "Texte": "Pas de cumul 186 jours"
         },
         {
           "Id": 242,
-          "Texte": "Plus de 186 jours",
-          "Question": {
-            "IdQuestion": 44,
-            "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
-            "IdReponseParent": 242,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Plus de 186 jours"
         },
         {
           "Id": 243,
-          "Texte": "Moins de 3 jours",
-          "Question": {
-            "IdQuestion": 45,
-            "Texte": "Attention, le CSP est rompu",
-            "IdReponseParent": 243,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Moins de 3 jours"
         }
       ]
     },
@@ -2245,25 +243,11 @@
       "Reponses": [
         {
           "Id": 271,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 26,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-            "IdReponseParent": 271,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 272,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 27,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 272,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2275,25 +259,11 @@
       "Reponses": [
         {
           "Id": 281,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 28,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-            "IdReponseParent": 281,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 282,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 29,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 282,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2305,25 +275,11 @@
       "Reponses": [
         {
           "Id": 291,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 30,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-            "IdReponseParent": 291,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 292,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 31,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 292,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2335,25 +291,11 @@
       "Reponses": [
         {
           "Id": 301,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 32,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
-            "IdReponseParent": 301,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 302,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 33,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 302,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2365,25 +307,11 @@
       "Reponses": [
         {
           "Id": 311,
-          "Texte": "Avant le d�but du 7�me mois CSP",
-          "Question": {
-            "IdQuestion": 34,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-            "IdReponseParent": 311,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le debut du 7eme mois CSP"
         },
         {
           "Id": 312,
-          "Texte": "Apr�s le d�but du 7�me mois CSP",
-          "Question": {
-            "IdQuestion": 35,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-            "IdReponseParent": 312,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le debut du 7eme mois CSP"
         }
       ]
     },
@@ -2395,25 +323,11 @@
       "Reponses": [
         {
           "Id": 321,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 38,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-            "IdReponseParent": 321,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 322,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 39,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 322,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2425,25 +339,11 @@
       "Reponses": [
         {
           "Id": 331,
-          "Texte": "Avant le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 40,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
-            "IdReponseParent": 331,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le 10eme mois CSP"
         },
         {
           "Id": 332,
-          "Texte": "Apr�s le 10�me mois CSP",
-          "Question": {
-            "IdQuestion": 41,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
-            "IdReponseParent": 332,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le 10eme mois CSP"
         }
       ]
     },
@@ -2455,167 +355,135 @@
       "Reponses": [
         {
           "Id": 341,
-          "Texte": "Avant le d�but du 7�me mois CSP",
-          "Question": {
-            "IdQuestion": 42,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
-            "IdReponseParent": 341,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Avant le debut du 7eme mois CSP"
         },
         {
           "Id": 342,
-          "Texte": "Apr�s le d�but du 7�me mois CSP",
-          "Question": {
-            "IdQuestion": 43,
-            "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
-            "IdReponseParent": 342,
-            "IdPosition": 7,
-            "Reponses": null
-          }
+          "Texte": "Apres le debut du 7eme mois CSP"
         }
       ]
     },
     {
       "IdQuestion": 26,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement.",
       "IdReponseParent": 271,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 27,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 272,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 28,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement.",
       "IdReponseParent": 281,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 29,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 282,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 30,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement",
       "IdReponseParent": 291,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 31,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 292,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 32,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement",
       "IdReponseParent": 301,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 33,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 302,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 34,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures <br> Sur TeO : completer l'evenement, importer le contrat dans 'document'",
       "IdReponseParent": 311,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 35,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. La date de fin du CSP est reporte d'autant de jours travaille dans un maximum de 3 mois",
       "IdReponseParent": 312,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 36,
-      "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
+      "Texte": "Au bout de 186 jours de periode de travail cumule, le CSP est rompu",
       "IdReponseParent": 232,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 37,
       "Texte": "Attention, le CSP est rompu",
       "IdReponseParent": 233,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 38,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement.",
       "IdReponseParent": 321,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 39,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 322,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 40,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Il faudra compl�ter l'attestation temps partiel choisi pour r�aliser la sortie positive. <\br> Le DE peut demander une prime de reclassement.",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Il faudra completer l'attestation temps partiel choisi pour realiser la sortie positive. Le DE peut demander une prime de reclassement.",
       "IdReponseParent": 331,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 41,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point �tape et FE <\br> Le De ne peut pas pr�tendre � la prime (mais il peut demander l'IDR si perte de salaire)",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. Sur Prest@ppli : indiquer la date de prise de poste, importer le contrat et si besoin le PSP, point etape et FE. Le De ne peut pas pretendre a la prime (mais il peut demander l'IDR si perte de salaire)",
       "IdReponseParent": 332,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 42,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document'",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures <br> Sur TeO : completer l'evenement, importer le contrat dans 'document'",
       "IdReponseParent": 341,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 43,
-      "Texte": "Le contrat r�cup�r� doit �tre sign� des 2 parties et doit contenir toutes les pages pr�cisant les dates, la dur�e horaire et les signatures <\br> Sur T�O : compl�ter l'�v�nement, importer le contrat dans 'document' <\br> La date de fin du CSP est report� d'autant de jours travaill� dans un maximum de 3 mois",
+      "Texte": "Le contrat recupere doit etre signe des 2 parties et doit contenir toutes les pages precisant les dates, la duree horaire et les signatures. Sur TeO : completer l'evenement, importer le contrat dans 'document'. La date de fin du CSP est reporte d'autant de jours travaille dans un maximum de 3 mois",
       "IdReponseParent": 342,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 44,
-      "Texte": "Au bout de 186 jours de p�riode de travail cumul�, le CSP est rompu",
+      "Texte": "Au bout de 186 jours de periode de travail cumule, le CSP est rompu",
       "IdReponseParent": 242,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     },
     {
       "IdQuestion": 45,
       "Texte": "Attention, le CSP est rompu",
       "IdReponseParent": 243,
-      "IdPosition": 7,
-      "Reponses": null
+      "IdPosition": 7
     }
   ]
+
+
 }
