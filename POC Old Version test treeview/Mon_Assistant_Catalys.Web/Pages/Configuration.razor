@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 
-<!-- h1>Page de configuration du questionnaire-->
+<!-- Page de configuration du questionnaire-->
 <div class="main">
     <div class="row">
         <div class="col-md-7">
@@ -26,7 +26,7 @@
 
                     @if (question.Reponses != null)
                     {
-                        @foreach (var rep in question.Reponses)
+                        @foreach (Reponse rep in question.Reponses)
                         {
                             <div class="col-12 row">
                                 <label class="col-2 font-weight-bold">Reponse</label>
@@ -58,7 +58,7 @@
     Question currentQuestion = null;
 
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
-    QuestionnaireService context = new QuestionnaireService();
+    QuestionnaireService service = new QuestionnaireService();
     List<Question> toDisplayQuestionnaire = new List<Question>();
 
     List<Question> toDisplayTree = null;
@@ -67,17 +67,17 @@
     {
         question = new Question();
 
-        questionnaire = context.GetQuestionnaire();
+        questionnaire = service.GetQuestionnaire();
 
         toDisplayTree = new List<Question>();
 
-        toDisplayTree = context.displayTree(toDisplayQuestionnaire);
+        toDisplayTree = service.displayTree();
 
-        foreach (var q in questionnaire.Questions)
+        foreach (Question quest in questionnaire.Questions)
         {
-            if (q.IdQuestion == 1)
+            if (quest.IdQuestion == 1)
             {
-                question = q;
+                question = quest;
             }
         }
     }
@@ -125,7 +125,7 @@
 
     void OnExit()
     {
-        context.UpdateJsonFiles();
+        service.UpdateJsonFiles();
     }
 }
 

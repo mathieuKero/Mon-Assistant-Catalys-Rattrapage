@@ -17,8 +17,8 @@ namespace Mon_Assistant_Catalys.Web.Services
         private readonly Questionnaire questionnaire = new Questionnaire();
 
         /// <summary>
-        /// Instanciation du service questionnaire
-        /// On récupère les données provenant du contexte de données
+        ///     Instanciation du service questionnaire
+        ///     On récupère les données provenant du contexte de données
         /// </summary>
         public QuestionnaireService()
         {
@@ -26,23 +26,25 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        /// Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
-        /// Cela restructure la liste en arbre pour en permettre la manipulation
+        ///    Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
+        ///    Cela restructure la liste en arbre pour en permettre la manipulation
         /// </summary>
         /// <param name="q">Questionnaire à restructurer</param>
         /// <returns>Questionnaire restructuré</returns>
-        public List<Question> displayTree(List<Question> q)
+        public List<Question> displayTree()
         {
+            List<Question> questions = new List<Question>();
+
             //Optention des premières questions
-            q = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
+            questions = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
 
             //Pour chacun des questionnaires, on relance le tri
-            foreach (Question question in q)
+            foreach (Question question in questions)
             {
                 ConstructTree(question);
             }
 
-            return q;
+            return questions;
         }
 
         /// <summary>
@@ -80,7 +82,8 @@ namespace Mon_Assistant_Catalys.Web.Services
             }
             else
             {
-                // Renommer les deux fichiers avec les suffixes correspondants
+                // Renommer les deux fichiers avec les suffixes correspondant
+                File.Delete("Files\\data_1_OLD.json");
                 File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
                 File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
             }
@@ -88,7 +91,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        /// Méthode récurcive => à partir de la question fournie en paramètre, on associe les question enfantes
+        ///     Méthode récurcive => à partir de la question fournie en paramètre, on associe les question enfantes
         /// </summary>
         /// <param name="question">Question à associer</param>
         public void ConstructTree(Question question)
@@ -125,7 +128,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        /// Retrourne l'instance de questionnaire
+        ///     Retrourne l'instance de questionnaire
         /// </summary>
         /// <returns>Instance de questionnaire</returns>
         public Questionnaire GetQuestionnaire()
