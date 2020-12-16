@@ -12,13 +12,11 @@ namespace Mon_Assistant_Catalys.Unit_Tests
         /// Vérification que la liste de questionnaire est bien créée et non nule
         /// </summary>
         [TestMethod]
-          public void IsDataLoadOk()
+        public void IsDataLoadOk()
         {
-            //Arrange
-            QuestionnaireService context = new QuestionnaireService();
+          QuestionnaireService context = new QuestionnaireService();
 
-            //Act
-            Assert.IsNotNull(context.GetQuestionnaire(), "Le questionnaire chargé n'est pas conforme ou n'existe pas.");
+          Assert.IsNotNull(context.GetQuestionnaire(), "Le questionnaire chargé n'est pas conforme ou n'existe pas.");
         }
     }
 }

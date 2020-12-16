@@ -11,39 +11,35 @@ namespace Mon_Assistant_Catalys.Web.Services.Tests
     public class QuestionnaireServiceTest
     {
         private QuestionnaireService service = new QuestionnaireService();
-
-        [TestMethod()]
-        public void QuestionnaireServiceTests()
-        {
-           
-
-        }
+        
+        private JsonQuestionnaireContext jsonContext= JsonQuestionnaireContext.Instance;
 
         [TestMethod()]
         public void displayTreeTest()
         {
             List<Question> listQuestions = new List<Question>();
 
-            listQuestions.Add(new Question(1, "test question", null , 1, null));
-            Assert.IsNotNull(this.service.displayTree(listQuestions));
+            listQuestions = this.service.displayTree();
+
+            Assert.IsNotNull(listQuestions);
         }
 
         [TestMethod()]
         public void UpdateJsonFilesTest()
         {
-            Assert.Fail();
+           service.UpdateJsonFiles();
         }
 
         [TestMethod()]
         public void ConstructTreeTest()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]
         public void GetQuestionnaireTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(service.GetQuestionnaire());
         }
     }
 }
