@@ -19,10 +19,10 @@
             <div id="questionnaireArbo">
 
                 <br />
-                <div class="question">
+                <div class="question" @ref=@tmpTruc>
                     <form action="">
                         <table>
-                            <tr class="question">
+                            <tr class="@((true? "hide-errors" : ""))">
                                 <td class="text">
                                     <input class="question" value="text question" required="" />
                                 </td>
@@ -103,6 +103,8 @@
 
 @code {
 
+    ElementReference tmpTruc;
+
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
     QuestionnaireService context = new QuestionnaireService();
     List<Question> toDisplayQuestionnaire = new List<Question>();
@@ -148,7 +150,6 @@
             //TODO add log messages
             throw;
         }
-
     }
 }
 

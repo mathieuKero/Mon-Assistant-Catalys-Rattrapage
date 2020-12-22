@@ -50,6 +50,26 @@ namespace Mon_Assistant_Catalys.Web.Models
         }
 
         #endregion
+
+        #region Methods
+        public bool ReponseApresQuestion()
+        {
+            try
+            {
+                List<Reponse> reps = this.Reponses;
+                if (reps == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        #endregion
     }
 
 }
