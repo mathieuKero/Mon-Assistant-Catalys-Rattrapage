@@ -18,18 +18,16 @@
                         <label for="mdp">Mot de passe</label>
                         <input id="mdp" type="password" placeholder="" required=""><br>
                     </fieldset>
-                    <p><input type="submit" value="Confirmer"></p>
+                    <!--Solution temporaire-->
+                    <!--<p><input type="submit" value="Confirmer"></p>-->
+                    <button class="btn btn-primary" @onclick="ToAuth">Confirmer</button>
+
                 </form>
             </div>
         </div>
         <div class="col"></div>
     </div>
 </div>
-
-<!-- TODO: Supprimer quand l'authentification est fonctionnelle -->
-<br/>
-<button class="btn btn-primary" @onclick="ToAuth">Passage secret</button>
-<!---->
 
 @code {
 

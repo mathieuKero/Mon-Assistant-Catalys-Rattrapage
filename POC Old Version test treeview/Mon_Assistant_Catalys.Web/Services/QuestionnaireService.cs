@@ -1,8 +1,8 @@
 ﻿using Mon_Assistant_Catalys.Web.Models;
-
-using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 
 namespace Mon_Assistant_Catalys.Web.Services
 {
@@ -17,8 +17,8 @@ namespace Mon_Assistant_Catalys.Web.Services
         private readonly Questionnaire questionnaire = new Questionnaire();
 
         /// <summary>
-        /// Instanciation du service questionnaire
-        /// On récupère les données provenant du contexte de données
+        ///     Instanciation du service questionnaire
+        ///     On récupère les données provenant du contexte de données
         /// </summary>
         public QuestionnaireService()
         {
@@ -26,27 +26,72 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        /// Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
-        /// Cela restructure la liste en arbre pour en permettre la manipulation
+        ///    Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
+        ///    Cela restructure la liste en arbre pour en permettre la manipulation
         /// </summary>
         /// <param name="q">Questionnaire à restructurer</param>
         /// <returns>Questionnaire restructuré</returns>
-        public List<Question> displayTree(List<Question> q)
+        public List<Question> displayTree()
         {
+            List<Question> questions = new List<Question>();
+
             //Optention des premières questions
-            q = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
+            questions = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
 
             //Pour chacun des questionnaires, on relance le tri
-            foreach (Question question in q)
+            foreach (Question question in questions)
             {
                 ConstructTree(question);
             }
 
-            return q;
+            return questions;
         }
 
         /// <summary>
-        /// Méthode récurcive => à partir de la question fournie en paramètre, on associe les question enfantes
+        ///     Mise à jour des fichiers Json
+        /// </summary>
+        /// <param name="Id"></param>
+        public void UpdateJsonFiles()
+        {
+            // On créer un fichier json à partir du questionnaire
+            using (StreamWriter file = File.CreateText("Files\\data_1_CURRENT_TMP.json"))
+            {
+                
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Formatting = Formatting.Indented;
+
+                //serialize object directly into file stream
+                serializer.Serialize(file, questionnaire);
+            }
+            
+            // On compare les deux fichiers JSON pour voir si des différences existent
+
+            string jsonText1 = File.ReadAllText("Files\\data_1_CURRENT_TMP.json");
+            string jsonText2 = File.ReadAllText("Files\\data_1_CURRENT.json");
+
+            JObject json1 = JObject.Parse(jsonText1);
+            JObject json2 = JObject.Parse(jsonText2);
+
+            bool areEqual = JToken.DeepEquals(json1, json2);
+
+            // Si aucune différence, le fichier nouvellement créé est supprimé
+            if (areEqual == true)
+            {
+                // Supprimer fichier _TMP
+                File.Delete("Files\\data_1_CURRENT_TMP.json");
+            }
+            else
+            {
+                // Renommer les deux fichiers avec les suffixes correspondant
+                File.Delete("Files\\data_1_OLD.json");
+                File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
+                File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
+            }
+
+        }
+
+        /// <summary>
+        ///     Méthode récurcive => à partir de la question fournie en paramètre, on associe les question enfantes
         /// </summary>
         /// <param name="question">Question à associer</param>
         public void ConstructTree(Question question)
@@ -83,7 +128,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        /// Retrourne l'instance de questionnaire
+        ///     Retrourne l'instance de questionnaire
         /// </summary>
         /// <returns>Instance de questionnaire</returns>
         public Questionnaire GetQuestionnaire()
