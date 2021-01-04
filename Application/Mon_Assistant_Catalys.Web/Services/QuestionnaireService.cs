@@ -105,7 +105,7 @@ namespace Mon_Assistant_Catalys.Web.Services
                     {
                         //Attribution de la question parente et enfante
                         reponse.Question = questionnaire.Questions.Find(q => q.IdReponseParent == reponse.Id);
-                        reponse.Question.PreviousQuestion = question;
+                        reponse.Question.QuestionPrecedente = question;
 
                         //Attribution sur la question enfante
                         ConstructTree(reponse.Question);
@@ -113,15 +113,15 @@ namespace Mon_Assistant_Catalys.Web.Services
                     }
                 }
                 //Si toutes les réponses ont été associées à leur question, alors retour sur l'élément parent
-                if (question.PreviousQuestion != null)
+                if (question.QuestionPrecedente != null)
                 {
-                    ConstructTree(question.PreviousQuestion);
+                    ConstructTree(question.QuestionPrecedente);
                 }
             }
             else
             {
                 //Si la question ne contient pas de réponse c'est que l'on se trouve dans le message de fin
-                ConstructTree(question.PreviousQuestion);
+                ConstructTree(question.QuestionPrecedente);
             }
         }
 
