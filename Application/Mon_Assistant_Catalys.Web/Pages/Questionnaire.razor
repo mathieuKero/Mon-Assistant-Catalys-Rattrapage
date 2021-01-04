@@ -116,17 +116,20 @@
                             <div class="message-body">@msg.MessageContent</div>
                             @if (msg.LinkedQuestion.ReponseApresQuestion())
                             {
-                                @foreach (var reponse in msg.LinkedQuestion.Reponses)
+                                @foreach (var answer in msg.LinkedQuestion.Answers)
                                 {
-                                    <button id="@reponse.Id" @onclick="(e => ButtonClick(reponse.Id))">@reponse.Texte</button>
+                                    <button id="@answer.Id" @onclick="(e => ButtonClick(answer.Id))">@answer.Texte</button>
                                 }
+                            }
+                            else
+                            {
+
                             }
                         </div>
 
                     }
                 </li>
             }
-
         </ul>
     </div>
 </div>
@@ -142,7 +145,7 @@
     private List<Models.Message> Messages { get; set; } = new List<Models.Message>();
 
     public Question question { get; set; }
-    public Reponse reponse { get; set; }
+    public Answer answer { get; set; }
 
     Question currentQuestion = null;
 
@@ -173,7 +176,7 @@
 
     private void ProcessMessage(int idQuestion)
     {
-        Reponse currentRep = currentQuestion.Reponses.Find(r => r.Id == idQuestion);
+        Answer currentRep = currentQuestion.Answers.Find(r => r.Id == idQuestion);
         Messages.Add(new Models.Message() { MessageContent = currentRep.Texte, Type = Models.Message.MessageType.UserMessage });
 
         currentQuestion = currentRep.Question;
@@ -190,9 +193,9 @@
         await JSRuntime.InvokeAsync<string>("scrollChat");
     }
 
-    private void ButtonClick(int idReponse)
+    private void ButtonClick(int idAnswer)
     {
-        ProcessMessage(idReponse);
+        ProcessMessage(idAnswer);
     }
 
 }

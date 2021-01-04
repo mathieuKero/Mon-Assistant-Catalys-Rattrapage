@@ -38,7 +38,6 @@ namespace Mon_Assistant_Catalys.Web.Models
 
         #endregion
 
-
         #region Methods
 
 

@@ -24,12 +24,12 @@
                         <InputText class="form-control col-10" @bind-Value="question.Texte" placeholder="Contenu de la question" />
                     </div>
 
-                    @if (question.Reponses != null)
+                    @if (question.Answers != null)
                     {
-                        @foreach (Reponse rep in question.Reponses)
+                        @foreach (Answer rep in question.Answers)
                         {
                             <div class="col-12 row">
-                                <label class="col-2 font-weight-bold">Reponse</label>
+                                <label class="col-2 font-weight-bold">Answer</label>
                                 <InputText class="form-control col-9" @bind-Value="@rep.Texte" placeholder="Contenu de la reponse" />
                                 <input type="submit" class="form-control col-1 btn-primary" value="Suppr" />
                             </div>
@@ -53,7 +53,7 @@
 
 @code {
     public Question question { get; set; }
-    public Reponse reponse { get; set; }
+    public Answer answer { get; set; }
 
     Question currentQuestion = null;
 
@@ -90,9 +90,9 @@
 
         try
         {
-            foreach (Reponse reponse in currentQuestion.Reponses)
+            foreach (Answer answer in currentQuestion.Answers)
             {
-                listQuestion.Add(reponse.Question);
+                listQuestion.Add(answer.Question);
             }
 
             args.Children.Data = listQuestion;
@@ -100,9 +100,9 @@
 
             foreach (Question question in listQuestion)
             {
-                if (question.Reponses == null)
+                if (question.Answers == null)
                 {
-                    args.Children.HasChildren = (Reponse) => false;
+                    args.Children.HasChildren = (Answer) => false;
                 }
             }
         }

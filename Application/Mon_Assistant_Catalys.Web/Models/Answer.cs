@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mon_Assistant_Catalys.Web.Models
 {
-    public class Reponse
+    public class Answer
     {
         #region Properties
 
@@ -21,12 +21,12 @@ namespace Mon_Assistant_Catalys.Web.Models
 
         #region Constructors
 
-        public Reponse()
+        public Answer()
         {
 
         }
 
-        public Reponse(int id, string texte)
+        public Answer(int id, string texte)
         {
             Id = id;
             Texte = texte;
