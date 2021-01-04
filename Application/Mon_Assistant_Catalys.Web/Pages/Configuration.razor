@@ -71,7 +71,7 @@
 
         toDisplayTree = new List<Question>();
 
-        toDisplayTree = service.displayTree();
+        toDisplayTree = service.TransformToTree();
 
         foreach (Question quest in questionnaire.Questions)
         {
@@ -86,19 +86,19 @@
     {
         currentQuestion = args.Value as Question;
 
-        List<Question> listQuestion = new List<Question>();
+        List<Question> questions = new List<Question>();
 
         try
         {
             foreach (Answer answer in currentQuestion.Answers)
             {
-                listQuestion.Add(answer.Question);
+                questions.Add(answer.Question);
             }
 
-            args.Children.Data = listQuestion;
+            args.Children.Data = questions;
             args.Children.TextProperty = "Text";
 
-            foreach (Question question in listQuestion)
+            foreach (Question question in questions)
             {
                 if (question.Answers == null)
                 {
@@ -120,6 +120,7 @@
 
     private void SaveQuestion()
     {
+        //TODO
         //context.SaveQuestion(question);
     }
 

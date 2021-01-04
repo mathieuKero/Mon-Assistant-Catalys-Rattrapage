@@ -7,6 +7,8 @@ namespace Mon_Assistant_Catalys.Web.Models
 {
     public class Message
     {
+        #region Properties
+
         public DateTime DateStamp { get; set; }
         public string MessageContent { get; set; }
         public MessageType Type { get; set; }
@@ -16,13 +18,21 @@ namespace Mon_Assistant_Catalys.Web.Models
         }
 
         public Question LinkedQuestion { get; set; }
+                
+        public string SelectedAnswer { get; set; }
 
-#nullable enable
-        public string? SelectedAnswer { get; set; }
+        #endregion
 
+        #region Constructors
+
+        /// <summary>
+        ///     Initialise une nouvelle instance de la classe <see cref="Message"/>.
+        /// </summary>
         public Message()
         {
             DateStamp = DateTime.Now;
         }
+
+        #endregion
     }
 }

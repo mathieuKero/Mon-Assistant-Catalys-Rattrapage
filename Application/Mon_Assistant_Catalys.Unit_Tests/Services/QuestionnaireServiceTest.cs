@@ -11,12 +11,7 @@ namespace Mon_Assistant_Catalys.Web.Services.Tests
     public class QuestionnaireServiceTest
     {
         private QuestionnaireService service = new QuestionnaireService();
-        
-        private JsonQuestionnaireContext jsonContext= JsonQuestionnaireContext.Instance;
 
-        /// <summary>
-        ///     Vérification que la liste de questionnaire est bien créée et non nule
-        /// </summary>
         [TestMethod]
         public void IsDataLoadOk()
         {
@@ -25,29 +20,47 @@ namespace Mon_Assistant_Catalys.Web.Services.Tests
             Assert.IsNotNull(context.GetQuestionnaire(), "Le questionnaire chargé n'est pas conforme ou n'existe pas.");
         }
 
-        /// <summary>
-        ///     Vérification que l'arbre est bien généré
-        /// </summary>
         [TestMethod]
-        public void displayTreeTest()
+        public void TransformToTreeTest()
         {
-            List<Question> listQuestions = new List<Question>();
+            List<Question> questions = new List<Question>();
 
-            listQuestions = this.service.displayTree();
+            questions = this.service.TransformToTree();
 
-            Assert.IsNotNull(listQuestions);
+            Assert.IsNotNull(questions);
         }
 
         [TestMethod]
         public void UpdateJsonFilesTest()
         {
-           service.UpdateJsonFiles();
+           this.service.UpdateJsonFiles();
+        }
+
+        [TestMethod]
+        public void CreateFileTest()
+        {
+            this.service.CreateFile("test method");
         }
 
         [TestMethod]
         public void ConstructTreeTest()
         {
-            
+            Question question = new Question();
+            Answer answer = new Answer();
+            List<Answer> answers = new List<Answer>();
+
+            answer.Id = 101;
+            answer.Text = "LCR";
+
+            answers.Add(answer);
+
+            question.IdPosition = 0;
+            question.IdQuestion = 1;
+            question.Text = "Quel est le type de presatation ?";
+            question.IdParentAnswer = 0;
+            question.Answers = answers;
+
+            this.service.ConstructTree(question);
         }
 
         [TestMethod]

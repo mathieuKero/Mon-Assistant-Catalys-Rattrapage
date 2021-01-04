@@ -30,6 +30,9 @@ namespace Mon_Assistant_Catalys.Web.Models
 
         #region Constructors
 
+        /// <summary>
+        ///     Initialise une nouvelle instance de la classe <see cref="JsonQuestionnaireContext"/>.
+        /// </summary>
         public JsonQuestionnaireContext()
         {
             
