@@ -93,34 +93,34 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <param name="question">Question à associer</param>
         public void ConstructTree(Question question)
         {
-            if (question.Reponses != null)
+            if (question.Answers != null)
             {
                 //Pour chacunes des réponses de la question : association à la question enfante
-                foreach (Reponse reponse in question.Reponses)
+                foreach (Answer answer in question.Answers)
                 {
                     //Si la question associée à la réponse est nulle c'est qu'elle n'a pas été encore attribuée. 
                     //A l'inverse si la question associée à la réponse n'est pas nulle c'est que la question enfant à été associée et qu'il ne faut pas la retraiter
-                    if (reponse.Question == null)
+                    if (answer.Question == null)
                     {
                         //Attribution de la question parente et enfante
-                        reponse.Question = questionnaire.Questions.Find(q => q.IdReponseParent == reponse.Id);
-                        reponse.Question.PreviousQuestion = question;
+                        answer.Question = questionnaire.Questions.Find(q => q.IdReponseParent == answer.Id);
+                        answer.Question.QuestionPrecedente = question;
 
                         //Attribution sur la question enfante
-                        ConstructTree(reponse.Question);
+                        ConstructTree(answer.Question);
 
                     }
                 }
                 //Si toutes les réponses ont été associées à leur question, alors retour sur l'élément parent
-                if (question.PreviousQuestion != null)
+                if (question.QuestionPrecedente != null)
                 {
-                    ConstructTree(question.PreviousQuestion);
+                    ConstructTree(question.QuestionPrecedente);
                 }
             }
             else
             {
                 //Si la question ne contient pas de réponse c'est que l'on se trouve dans le message de fin
-                ConstructTree(question.PreviousQuestion);
+                ConstructTree(question.QuestionPrecedente);
             }
         }
 

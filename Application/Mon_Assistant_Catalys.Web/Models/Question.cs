@@ -27,11 +27,11 @@ namespace Mon_Assistant_Catalys.Web.Models
         [JsonProperty("IdPosition")]
         public int IdPosition { get; set; }
 
-        [JsonProperty("Reponses")]
-        public List<Reponse> Reponses { get; set; }
+        [JsonProperty("Answers")]
+        public List<Answer> Answers { get; set; }
 
         [JsonIgnore]
-        public Question PreviousQuestion { get; set; }
+        public Question QuestionPrecedente { get; set; }
 
         #endregion
 
@@ -41,13 +41,13 @@ namespace Mon_Assistant_Catalys.Web.Models
 
         }
 
-        public Question(int idQuestion, string texte, int? idReponseParent, int idPosition, List<Reponse> reponses)
+        public Question(int idQuestion, string texte, int? idReponseParent, int idPosition, List<Answer> answers)
         {
             IdQuestion = idQuestion;
             Texte = texte;
             IdReponseParent = idReponseParent;
             IdPosition = idPosition;
-            Reponses = reponses;
+            Answers = answers;
         }
 
         #endregion
@@ -57,7 +57,7 @@ namespace Mon_Assistant_Catalys.Web.Models
         {
             try
             {
-                List<Reponse> reps = this.Reponses;
+                List<Answer> reps = this.Answers;
                 if (reps == null)
                 {
                     return false;

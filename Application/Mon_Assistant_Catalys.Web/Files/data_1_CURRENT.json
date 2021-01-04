@@ -7,7 +7,7 @@
       "Texte": "Quel est le type de presatation ?",
       "IdReponseParent": 0,
       "IdPosition": 0,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 101,
           "Texte": "LCR"
@@ -19,7 +19,7 @@
       "Texte": "Quelle est la situation du client ?",
       "IdReponseParent": 101,
       "IdPosition": 1,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 111,
           "Texte": "Employe"
@@ -35,7 +35,7 @@
       "Texte": "Quel est son type de contrat ?",
       "IdReponseParent": 111,
       "IdPosition": 2,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 121,
           "Texte": "Cdi"
@@ -55,7 +55,7 @@
       "Texte": "Quelle est la region de sa formation ?",
       "IdReponseParent": 113,
       "IdPosition": 2,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 141,
           "Texte": "BZH"
@@ -67,7 +67,7 @@
       "Texte": "Quelle est la duree du contrat ?",
       "IdReponseParent": 122,
       "IdPosition": 3,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 151,
           "Texte": "Plus de 6 mois"
@@ -83,7 +83,7 @@
       "Texte": "Quelle est la duree du contrat ?",
       "IdReponseParent": 123,
       "IdPosition": 3,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 161,
           "Texte": "Plus de 6 mois"
@@ -99,7 +99,7 @@
       "Texte": "Un PSE existe-t-il ?",
       "IdReponseParent": 141,
       "IdPosition": 3,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 171,
           "Texte": "Oui"
@@ -115,7 +115,7 @@
       "Texte": "Est-ce un cdi a temps partiel ou a temps plein ?",
       "IdReponseParent": 121,
       "IdPosition": 4,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 181,
           "Texte": "a temps partiel (78h)"
@@ -131,7 +131,7 @@
       "Texte": "Est-ce un cdd a temps partiel ou a temps plein ?",
       "IdReponseParent": 151,
       "IdPosition": 4,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 191,
           "Texte": "a temps partiel (78h)"
@@ -147,7 +147,7 @@
       "Texte": "Est-ce un ctt a temps partiel ou a temps plein ?",
       "IdReponseParent": 161,
       "IdPosition": 4,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 201,
           "Texte": "a temps partiel (78h)"
@@ -163,7 +163,7 @@
       "Texte": "Existe-t-il une prise en charge totale ?",
       "IdReponseParent": 171,
       "IdPosition": 4,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 211,
           "Texte": "Oui"
@@ -179,14 +179,14 @@
       "Texte": "Existe-t-il une prise en charge totale ?",
       "IdReponseParent": 172,
       "IdPosition": 4,
-      "Reponses": []
+      "Answers": []
     },
     {
       "IdQuestion": 14,
       "Texte": "Quel est le nombre de jours de travail cumules ?",
       "IdReponseParent": 152,
       "IdPosition": 5,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 231,
           "Texte": "Pas de cumul 186 jours"
@@ -206,7 +206,7 @@
       "Texte": "Quel est le nombre de jours de travail cumules ?",
       "IdReponseParent": 162,
       "IdPosition": 5,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 241,
           "Texte": "Pas de cumul 186 jours"
@@ -226,21 +226,21 @@
       "Texte": "Est-il elligible au CPF ?",
       "IdReponseParent": 211,
       "IdPosition": 5,
-      "Reponses": []
+      "Answers": []
     },
     {
       "IdQuestion": 17,
       "Texte": "Est-il elligible au CPF ?",
       "IdReponseParent": 212,
       "IdPosition": 5,
-      "Reponses": []
+      "Answers": []
     },
     {
       "IdQuestion": 18,
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 181,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 271,
           "Texte": "Avant le 10eme mois CSP"
@@ -256,7 +256,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 182,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 281,
           "Texte": "Avant le 10eme mois CSP"
@@ -272,7 +272,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 191,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 291,
           "Texte": "Avant le 10eme mois CSP"
@@ -288,7 +288,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 192,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 301,
           "Texte": "Avant le 10eme mois CSP"
@@ -304,7 +304,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 231,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 311,
           "Texte": "Avant le debut du 7eme mois CSP"
@@ -320,7 +320,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 201,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 321,
           "Texte": "Avant le 10eme mois CSP"
@@ -336,7 +336,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 202,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 331,
           "Texte": "Avant le 10eme mois CSP"
@@ -352,7 +352,7 @@
       "Texte": "Contrat dans CSP ?",
       "IdReponseParent": 241,
       "IdPosition": 6,
-      "Reponses": [
+      "Answers": [
         {
           "Id": 341,
           "Texte": "Avant le debut du 7eme mois CSP"
