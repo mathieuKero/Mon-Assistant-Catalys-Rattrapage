@@ -109,14 +109,14 @@
                     {
                         <div class="user-datestamp">@msg.DateStamp</div>
                         <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div>
-                        messageContent += "\n" + @msg.MessageContent;
+                        AddMessageContent(@msg.MessageContent);
                     }
                     else
                     {
+                        AddMessageContent(@msg.MessageContent);
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
-                            messageContent += "\n" + @msg.MessageContent;
 
                             @if (msg.LinkedQuestion.ReponseApresQuestion())
                             {
@@ -127,12 +127,12 @@
                             }
                             else
                             {
-
+                                <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
                             }
                         </div>
-                    }
+                        }
                 </li>
-            }
+                    }
         </ul>
     </div>
 </div>
@@ -201,15 +201,21 @@
     {
         ProcessMessage(idAnswer);
     }
-    
+
     /// <summary>
     ///     Génère le fichier de sortie en fin d'échange avec l'assistant.
     /// </summary>
     public void GenerateFile()
     {
-        string path = @"";
+        context.CreateFile(messageContent);
 
 
+
+    }
+
+    public void AddMessageContent(string messageToAdd)
+    {
+        messageContent += "\n" + messageToAdd;
     }
 
 }

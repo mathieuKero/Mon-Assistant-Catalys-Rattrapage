@@ -84,7 +84,19 @@ namespace Mon_Assistant_Catalys.Web.Services
                 File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
                 File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
             }
+        }
 
+        /// <summary>
+        ///     Création du fichier de sortie à la fin du chat avec l'assistant.
+        /// </summary>
+        /// <param name="fileText"></param>
+        public void CreateFile(string fileText)
+        {
+            
+            using (StreamWriter file = File.CreateText("Files\\Fichier-sortie.txt"))
+            {
+                file.WriteLine(fileText);
+            }
         }
 
         /// <summary>
