@@ -36,11 +36,23 @@ namespace Mon_Assistant_Catalys.Web.Models
         #endregion
 
         #region Constructors
+
+        /// <summary>
+        ///     Initialise une nouvelle instance de la classe <see cref="Question"/>.
+        /// </summary>
         public Question()
         {
 
         }
 
+        /// <summary>
+        ///     Initialise une nouvelle instance de la classe <see cref="Question"/>.
+        /// </summary>
+        /// <param name="idQuestion"></param>
+        /// <param name="text"></param>
+        /// <param name="idParentAnswer"></param>
+        /// <param name="idPosition"></param>
+        /// <param name="answers"></param>
         public Question(int idQuestion, string text, int? idParentAnswer, int idPosition, List<Answer> answers)
         {
             IdQuestion = idQuestion;
@@ -53,6 +65,11 @@ namespace Mon_Assistant_Catalys.Web.Models
         #endregion
 
         #region Methods
+
+        /// <summary>
+        ///     Méthode permettant de vérifier si il y a une question après la réponse actuelle
+        /// </summary>
+        /// <returns></returns>
         public bool IsQuestionAfterAnwser()
         {
             try

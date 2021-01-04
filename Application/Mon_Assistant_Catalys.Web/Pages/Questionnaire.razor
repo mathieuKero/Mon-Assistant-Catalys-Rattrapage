@@ -111,10 +111,10 @@
     <div class="chat-header">Questionnaire</div>
     <div class="chat-area" id="ChatBody">
         <ul class="chat-list">
-            @foreach (var msg in Messages)
+            @foreach (Message msg in Messages)
             {
                 <li class="message">
-                    @if (msg.Type == Mon_Assistant_Catalys.Web.Models.Message.MessageType.UserMessage)
+                    @if (msg.Type == Message.MessageType.UserMessage)
                     {
                         <div class="user-datestamp">@msg.DateStamp</div>
                         <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div>
@@ -126,21 +126,19 @@
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
 
-                            <div class="container">
+                            @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
+                            {
+                                @foreach (Answer answer in msg.LinkedQuestion.Answers)
+                                {
+                                    <button id="@answer.Id" class="btn btn-outline-light" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
+                                }
+                            }
+                            else
+                            {
+                                AddMessageContent(@msg.MessageContent);
+                                <button class="btn btn-outline-light" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                            }
 
-                                @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
-                                {
-                                    @foreach (var answer in msg.LinkedQuestion.Answers)
-                                    {
-                                        <button id="@answer.Id" class="btn btn-outline-light" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
-                                    }
-                                }
-                                else
-                                {
-                                    AddMessageContent(@msg.MessageContent);
-                                    <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
-                                }
-                            </div>
                         </div>
                     }
                 </li>
@@ -162,7 +160,7 @@
     Question currentQuestion = null;
 
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
-    QuestionnaireService context = new QuestionnaireService();
+    QuestionnaireService service = new QuestionnaireService();
 
     List<Question> toDisplayTree = null;
     public string messageContent = "";
@@ -171,36 +169,31 @@
     {
         question = new Question();
 
-        questionnaire = context.GetQuestionnaire();
+        questionnaire = service.GetQuestionnaire();
 
         toDisplayTree = new List<Question>();
 
-        toDisplayTree = context.displayTree();
+        toDisplayTree = service.TransformToTree();
 
-        foreach (var q in questionnaire.Questions)
+        foreach (Question q in questionnaire.Questions)
         {
             if (q.IdQuestion == 1)
             {
                 currentQuestion = q;
             }
         }
-        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Text, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+        Messages.Add(new Message() { MessageContent = currentQuestion.Text, Type = Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
     }
 
     private void ProcessMessage(int idQuestion)
     {
         Answer currentRep = currentQuestion.Answers.Find(r => r.Id == idQuestion);
-        Messages.Add(new Models.Message() { MessageContent = currentRep.Text, Type = Models.Message.MessageType.UserMessage });
+        Messages.Add(new Message() { MessageContent = currentRep.Text, Type = Message.MessageType.UserMessage });
 
         currentQuestion = currentRep.Question;
-        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Text, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+        Messages.Add(new Message() { MessageContent = currentQuestion.Text, Type = Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
     }
 
-    private void KeyUp(KeyboardEventArgs e)
-    {
-        //if (e.Key == "Enter")
-        //ProcessMessage();
-    }
     private async void ScrollChat()
     {
         await JSRuntime.InvokeAsync<string>("scrollChat");
@@ -221,7 +214,7 @@
 
         string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
 
-        context.CreateFile(messageContent);
+        service.CreateFile(messageContent);
 
         // Téléchargement du fichier
         using (WebClient client = new WebClient())
@@ -233,7 +226,7 @@
 
     public void AddMessageContent(string messageToAdd)
     {
-        messageContent += "\n" + messageToAdd;
+        messageContent = messageToAdd;
     }
 
 }
