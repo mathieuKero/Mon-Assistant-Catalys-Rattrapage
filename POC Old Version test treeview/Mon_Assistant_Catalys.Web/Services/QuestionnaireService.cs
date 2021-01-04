@@ -29,7 +29,6 @@ namespace Mon_Assistant_Catalys.Web.Services
         ///    Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
         ///    Cela restructure la liste en arbre pour en permettre la manipulation
         /// </summary>
-        /// <param name="q">Questionnaire à restructurer</param>
         /// <returns>Questionnaire restructuré</returns>
         public List<Question> displayTree()
         {
@@ -50,7 +49,6 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <summary>
         ///     Mise à jour des fichiers Json
         /// </summary>
-        /// <param name="Id"></param>
         public void UpdateJsonFiles()
         {
             // On créer un fichier json à partir du questionnaire
