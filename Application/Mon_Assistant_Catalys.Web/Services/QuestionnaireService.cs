@@ -26,7 +26,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         }
 
         /// <summary>
-        ///    Méthode de transformation de la liste de question en question / réponses imbriqués les unes dans les autres 
+        ///    Méthode de transformation de la liste de questions en questions / réponses imbriquées les unes dans les autres 
         ///    Cela restructure la liste en arbre pour en permettre la manipulation
         /// </summary>
         /// <returns>Questionnaire restructuré</returns>
@@ -34,7 +34,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         {
             List<Question> questions = new List<Question>();
 
-            //Optention des premières questions
+            //Récupération des premières questions
             questions = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
 
             //Pour chacun des questionnaires, on relance le tri
@@ -63,7 +63,6 @@ namespace Mon_Assistant_Catalys.Web.Services
             }
             
             // On compare les deux fichiers JSON pour voir si des différences existent
-
             string jsonText1 = File.ReadAllText("Files\\data_1_CURRENT_TMP.json");
             string jsonText2 = File.ReadAllText("Files\\data_1_CURRENT.json");
 

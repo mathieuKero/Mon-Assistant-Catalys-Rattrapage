@@ -108,12 +108,16 @@
                     @if (msg.Type == Mon_Assistant_Catalys.Web.Models.Message.MessageType.UserMessage)
                     {
                         <div class="user-datestamp">@msg.DateStamp</div>
-                        <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div> }
+                        <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div>
+                        messageContent += "\n" + @msg.MessageContent;
+                    }
                     else
                     {
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
+                            messageContent += "\n" + @msg.MessageContent;
+
                             @if (msg.LinkedQuestion.ReponseApresQuestion())
                             {
                                 @foreach (var reponse in msg.LinkedQuestion.Reponses)
@@ -121,8 +125,11 @@
                                     <button id="@reponse.Id" @onclick="(e => ButtonClick(reponse.Id))">@reponse.Texte</button>
                                 }
                             }
+                            else
+                            {
+                                <button @onclick="(e => GenerateFile())">Télécharger le fichier récapitulatif</button>
+                            }
                         </div>
-
                     }
                 </li>
             }
@@ -150,6 +157,7 @@
     QuestionnaireService context = new QuestionnaireService();
 
     List<Question> toDisplayTree = null;
+    public string messageContent = "";
 
     protected override void OnInitialized()
     {
@@ -193,6 +201,16 @@
     private void ButtonClick(int idReponse)
     {
         ProcessMessage(idReponse);
+    }
+    
+    /// <summary>
+    ///     Génère le fichier de sortie en fin d'échange avec l'assistant.
+    /// </summary>
+    public void GenerateFile()
+    {
+        string path = @"";
+
+
     }
 
 }

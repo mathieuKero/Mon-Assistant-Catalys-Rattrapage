@@ -14,7 +14,21 @@ namespace Mon_Assistant_Catalys.Web.Services.Tests
         
         private JsonQuestionnaireContext jsonContext= JsonQuestionnaireContext.Instance;
 
-        [TestMethod()]
+        /// <summary>
+        ///     Vérification que la liste de questionnaire est bien créée et non nule
+        /// </summary>
+        [TestMethod]
+        public void IsDataLoadOk()
+        {
+            QuestionnaireService context = new QuestionnaireService();
+
+            Assert.IsNotNull(context.GetQuestionnaire(), "Le questionnaire chargé n'est pas conforme ou n'existe pas.");
+        }
+
+        /// <summary>
+        ///     Vérification que l'arbre est bien généré
+        /// </summary>
+        [TestMethod]
         public void displayTreeTest()
         {
             List<Question> listQuestions = new List<Question>();
@@ -24,19 +38,19 @@ namespace Mon_Assistant_Catalys.Web.Services.Tests
             Assert.IsNotNull(listQuestions);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void UpdateJsonFilesTest()
         {
            service.UpdateJsonFiles();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ConstructTreeTest()
         {
             
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetQuestionnaireTest()
         {
             Assert.IsNotNull(service.GetQuestionnaire());
