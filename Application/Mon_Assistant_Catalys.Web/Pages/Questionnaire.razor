@@ -97,6 +97,14 @@
         padding: 15px 15px 15px 15px;
         max-width: 90%
     }
+
+    .btn-bot {
+        color: hotpink;
+        background-color: pink;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin: 3px;
+    }
 </style>
 
 <div class="chat-window">
@@ -113,6 +121,7 @@
                     }
                     else
                     {
+
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
@@ -121,18 +130,21 @@
                             {
                                 @foreach (Answer answer in msg.LinkedQuestion.Answers)
                                 {
-                                    <button id="@answer.Id" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
+                                    <button id="@answer.Id" class="btn btn-outline-light" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
                                 }
                             }
                             else
                             {
                                 AddMessageContent(@msg.MessageContent);
-                                <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                <button class="btn btn-outline-light" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
                             }
+
                         </div>
+
                         }
                 </li>
              }
+
         </ul>
     </div>
 </div>
@@ -200,8 +212,10 @@
     public void GenerateFile()
     {
 
-        string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString();
- 
+
+        string actualDate = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+
+
         string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
 
         service.CreateFile(messageContent);
