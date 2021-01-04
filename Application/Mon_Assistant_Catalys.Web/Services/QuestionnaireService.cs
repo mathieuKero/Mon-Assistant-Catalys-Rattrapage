@@ -93,7 +93,8 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <param name="fileText"></param>
         public void CreateFile(string fileText)
         {
-            string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString();
+            string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString()
+                        + "-" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString();
 
             string path = "Files\\Fichier-sortie-" + actualDate + ".txt";
 
