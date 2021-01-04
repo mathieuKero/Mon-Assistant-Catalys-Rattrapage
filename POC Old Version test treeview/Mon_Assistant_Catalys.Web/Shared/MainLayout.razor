@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+
+<div class="main">
+    <div class="top-row" id="entete">
+        <div class="col-md-4">
+            <a href="/" class="home">
+                <i class="fas fa-user-tie"></i>
+                Mon Assistant Catalys
+            </a>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2">
+            <a href="/login" class="config">
+				<i class="fas fa-cog"></i>
+                Configuration
+            </a>
+        </div>
+    </div>
+
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+<style>
+    #entete {
+        background-color: #EE7813;
+        height: 75px;
+    }
+
+    a.home {
+        color: white;
+        font-weight: bold;
+        padding-top: 10px;
+        font-size: 35px;
+    }
+
+    a.config {
+        color: white;
+    }
+</style>

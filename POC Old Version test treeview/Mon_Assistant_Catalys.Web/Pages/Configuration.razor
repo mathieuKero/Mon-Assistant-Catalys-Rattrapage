@@ -1,0 +1,130 @@
+﻿@page "/configuration"
+@using Radzen
+@using Mon_Assistant_Catalys.Web.Models
+@using Mon_Assistant_Catalys.Web.Services
+
+<meta charset="UTF-8">
+
+<!-- Page de configuration du questionnaire-->
+<div class="main">
+    <div class="row">
+        <div class="col-md-7">
+
+            <RadzenTree Data="@toDisplayTree" Expand="@OnExpand" Change="@OnChange">
+                <RadzenTreeLevel TextProperty="Texte" />
+            </RadzenTree>
+
+        </div>
+        <div class="col-md-5">
+            @if (question.IdQuestion != 0)
+            {
+                <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
+                    <div class="col-12 row">
+                        <label class="col-2 font-weight-bold">Question</label>
+                        <InputText class="form-control col-10" @bind-Value="question.Texte" placeholder="Contenu de la question" />
+                    </div>
+
+                    @if (question.Reponses != null)
+                    {
+                        @foreach (Reponse rep in question.Reponses)
+                        {
+                            <div class="col-12 row">
+                                <label class="col-2 font-weight-bold">Reponse</label>
+                                <InputText class="form-control col-9" @bind-Value="@rep.Texte" placeholder="Contenu de la reponse" />
+                                <input type="submit" class="form-control col-1 btn-primary" value="Suppr" />
+                            </div>
+                        }
+                    }
+
+                    <br />
+                    <div class="col-12 row">
+                        <span class="col-3"></span>
+                        <input type="submit" class="form-control col-6 btn-primary" value="Ajouter une reponse" />
+                    </div>
+                    <div class="col-12 row">
+                        <span class="col-3"></span>
+                        <input type="submit" class="form-control col-6 btn-primary" value="Sauvegarder" @onClick="OnExit"/>
+                    </div>
+                </EditForm>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    public Question question { get; set; }
+    public Reponse reponse { get; set; }
+
+    Question currentQuestion = null;
+
+    public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
+    QuestionnaireService service = new QuestionnaireService();
+    List<Question> toDisplayQuestionnaire = new List<Question>();
+
+    List<Question> toDisplayTree = null;
+
+    protected override void OnInitialized()
+    {
+        question = new Question();
+
+        questionnaire = service.GetQuestionnaire();
+
+        toDisplayTree = new List<Question>();
+
+        toDisplayTree = service.displayTree();
+
+        foreach (Question quest in questionnaire.Questions)
+        {
+            if (quest.IdQuestion == 1)
+            {
+                question = quest;
+            }
+        }
+    }
+
+    void OnExpand(TreeExpandEventArgs args)
+    {
+        currentQuestion = args.Value as Question;
+
+        List<Question> listQuestion = new List<Question>();
+
+        try
+        {
+            foreach (Reponse reponse in currentQuestion.Reponses)
+            {
+                listQuestion.Add(reponse.Question);
+            }
+
+            args.Children.Data = listQuestion;
+            args.Children.TextProperty = "Texte";
+
+            foreach (Question question in listQuestion)
+            {
+                if (question.Reponses == null)
+                {
+                    args.Children.HasChildren = (Reponse) => false;
+                }
+            }
+        }
+        catch (Exception)
+        {
+            //TODO add log message
+            throw;
+        }
+    }
+
+    void OnChange(TreeEventArgs args)
+    {
+        question = args.Value as Question;
+    }
+
+    private void SaveQuestion()
+    {
+        //context.SaveQuestion(question);
+    }
+
+    void OnExit()
+    {
+        service.UpdateJsonFiles();
+    }
+}

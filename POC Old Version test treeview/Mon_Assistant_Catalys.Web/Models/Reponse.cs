@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace POC_lecture_json
+namespace Mon_Assistant_Catalys.Web.Models
 {
     public class Reponse
     {
@@ -15,7 +16,7 @@ namespace POC_lecture_json
         [JsonProperty("Texte")]
         public string Texte { get; set; }
 
-        public QuestionReponse Question { get; set; }
+        public Question Question { get; set; }
         #endregion
 
         #region Constructors

@@ -22,6 +22,7 @@ namespace POC_lecture_json
             // Ajout d'une questionReponse à une questionRéponse parente => Pas sûr du fonctionnement
             QuestionReponse QuestionParent = new QuestionReponse();
             QuestionReponse QuestionToAdd = new QuestionReponse();
+
             // Ajout de QuestionReponse à une questionReponse parente
             QuestionParent.ListQuestionReponses.Add(QuestionToAdd);
 
@@ -74,15 +75,16 @@ namespace POC_lecture_json
         private static Questionnaire LoadData()
         {
             Questionnaire questionnaire = new Questionnaire();
-            string path = @"D:\Developpement\Master C#\rattrapage\POC lecture json\POC lecture json\data_1_CURRENT.json";
+            string path = @"D:\Developpement\Projet Catalys rattrapage\Mon-Assistant-Catalys-Rattrapage\POC lecture json\POC lecture json\Files\data_1_CURRENT.json";
 
             // desedrialize JSON directly from a file
             using (StreamReader file = File.OpenText(path))
             {
 
                 JsonSerializer serializer = new JsonSerializer();
-                questionnaire = (Questionnaire)serializer.Deserialize(file, typeof(Questionnaire));
-            }
+               questionnaire = (Questionnaire)serializer.Deserialize(file, typeof(Questionnaire));
+
+            }            
 
             return questionnaire;
         }
