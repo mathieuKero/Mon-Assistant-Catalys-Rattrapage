@@ -15,8 +15,8 @@ namespace Mon_Assistant_Catalys.Web.Models
 
         #region Properties
        
-        [JsonProperty("Nom")]
-        public string Nom { get; set; }
+        [JsonProperty("Name")]
+        public string Name { get; set; }
 
         [JsonProperty("IdQuestionnaire")]
         public int IdQuestionnaire { get; set; }
@@ -37,11 +37,5 @@ namespace Mon_Assistant_Catalys.Web.Models
         }
 
         #endregion
-
-        #region Methods
-
-
-        #endregion
-
     }
 }
