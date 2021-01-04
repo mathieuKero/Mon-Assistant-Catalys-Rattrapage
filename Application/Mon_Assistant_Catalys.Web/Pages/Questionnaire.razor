@@ -2,6 +2,7 @@
 @using Mon_Assistant_Catalys.Web.Models
 @using Mon_Assistant_Catalys.Web.Services
 @using Microsoft.AspNetCore.Components.Web
+@using System.Net;
 
 <style type="text/css">
     .chat-window {
@@ -109,11 +110,9 @@
                     {
                         <div class="user-datestamp">@msg.DateStamp</div>
                         <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div>
-                        AddMessageContent(@msg.MessageContent);
                     }
                     else
                     {
-                        AddMessageContent(@msg.MessageContent);
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
@@ -127,6 +126,7 @@
                             }
                             else
                             {
+                                AddMessageContent(@msg.MessageContent);
                                 <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
                             }
                         </div>
@@ -136,9 +136,6 @@
         </ul>
     </div>
 </div>
-
-
-
 
 @code
 { [Parameter]
@@ -207,9 +204,18 @@
     /// </summary>
     public void GenerateFile()
     {
+
+        string actualDate = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+ 
+        string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
+
         context.CreateFile(messageContent);
 
-
+        // Téléchargement du fichier
+        using (WebClient client = new WebClient())
+        {
+            client.DownloadFile(filePath, @"C:\\temp\\test.txt");
+        }
 
     }
 

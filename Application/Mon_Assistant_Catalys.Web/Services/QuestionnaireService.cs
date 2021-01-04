@@ -1,6 +1,7 @@
 ﻿using Mon_Assistant_Catalys.Web.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -15,7 +16,7 @@ namespace Mon_Assistant_Catalys.Web.Services
         private JsonQuestionnaireContext jsonContext = JsonQuestionnaireContext.Instance;
 
         private readonly Questionnaire questionnaire = new Questionnaire();
-
+        
         /// <summary>
         ///     Instanciation du service questionnaire
         ///     On récupère les données provenant du contexte de données
@@ -83,8 +84,11 @@ namespace Mon_Assistant_Catalys.Web.Services
                 File.Delete("Files\\data_1_OLD.json");
                 File.Move("Files\\data_1_CURRENT.json", "Files\\data_1_OLD.json");
                 File.Move("Files\\data_1_CURRENT_TMP.json", "Files\\data_1_CURRENT.json");
+                
             }
         }
+
+
 
         /// <summary>
         ///     Création du fichier de sortie à la fin du chat avec l'assistant.
@@ -92,11 +96,15 @@ namespace Mon_Assistant_Catalys.Web.Services
         /// <param name="fileText"></param>
         public void CreateFile(string fileText)
         {
-            
-            using (StreamWriter file = File.CreateText("Files\\Fichier-sortie.txt"))
+            string actualDate = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+
+            string path = "Files\\Fichier-sortie-" + actualDate + ".txt";
+
+            using (StreamWriter file = File.CreateText(path))
             {
                 file.WriteLine(fileText);
             }
+
         }
 
         /// <summary>
