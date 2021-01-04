@@ -97,6 +97,14 @@
         padding: 15px 15px 15px 15px;
         max-width: 90%
     }
+
+    .btn-bot {
+        color: hotpink;
+        background-color: pink;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin: 3px;
+    }
 </style>
 
 <div class="chat-window">
@@ -113,26 +121,30 @@
                     }
                     else
                     {
+
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="message-body">@msg.MessageContent</div>
 
-                            @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
-                            {
-                                @foreach (var answer in msg.LinkedQuestion.Answers)
+                            <div class="container">
+
+                                @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
                                 {
-                                    <button id="@answer.Id" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
+                                    @foreach (var answer in msg.LinkedQuestion.Answers)
+                                    {
+                                        <button id="@answer.Id" class="btn btn-outline-light" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                AddMessageContent(@msg.MessageContent);
-                                <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
-                            }
+                                else
+                                {
+                                    AddMessageContent(@msg.MessageContent);
+                                    <button @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                }
+                            </div>
                         </div>
-                        }
-                </li>
                     }
+                </li>
+            }
         </ul>
     </div>
 </div>
@@ -206,7 +218,7 @@
     {
 
         string actualDate = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
- 
+
         string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
 
         context.CreateFile(messageContent);
