@@ -11,7 +11,7 @@
         <div class="col-md-7">
 
             <RadzenTree Data="@toDisplayTree" Expand="@OnExpand" Change="@OnChange">
-                <RadzenTreeLevel TextProperty="Texte" />
+                <RadzenTreeLevel TextProperty="Text" />
             </RadzenTree>
 
         </div>
@@ -21,7 +21,7 @@
                 <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
                     <div class="col-12 row">
                         <label class="col-2 font-weight-bold">Question</label>
-                        <InputText class="form-control col-10" @bind-Value="question.Texte" placeholder="Contenu de la question" />
+                        <InputText class="form-control col-10" @bind-Value="question.Text" placeholder="Contenu de la question" />
                     </div>
 
                     @if (question.Answers != null)
@@ -30,7 +30,7 @@
                         {
                             <div class="col-12 row">
                                 <label class="col-2 font-weight-bold">Answer</label>
-                                <InputText class="form-control col-9" @bind-Value="@rep.Texte" placeholder="Contenu de la reponse" />
+                                <InputText class="form-control col-9" @bind-Value="@rep.Text" placeholder="Contenu de la reponse" />
                                 <input type="submit" class="form-control col-1 btn-primary" value="Suppr" />
                             </div>
                         }
@@ -96,7 +96,7 @@
             }
 
             args.Children.Data = listQuestion;
-            args.Children.TextProperty = "Texte";
+            args.Children.TextProperty = "Text";
 
             foreach (Question question in listQuestion)
             {

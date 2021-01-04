@@ -13,8 +13,8 @@ namespace Mon_Assistant_Catalys.Web.Models
         [JsonProperty("Id")]
         public int Id { get; set; }
 
-        [JsonProperty("Texte")]
-        public string Texte { get; set; }
+        [JsonProperty("Text")]
+        public string Text { get; set; }
 
         public Question Question { get; set; }
         #endregion
@@ -29,7 +29,7 @@ namespace Mon_Assistant_Catalys.Web.Models
         public Answer(int id, string texte)
         {
             Id = id;
-            Texte = texte;
+            Text = texte;
         }
 
 

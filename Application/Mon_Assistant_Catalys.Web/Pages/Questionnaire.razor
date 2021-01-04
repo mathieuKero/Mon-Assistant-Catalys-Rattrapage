@@ -118,11 +118,11 @@
                             <div class="message-body">@msg.MessageContent</div>
                             messageContent += "\n" + @msg.MessageContent;
 
-                            @if (msg.LinkedQuestion.ReponseApresQuestion())
+                            @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
                             {
                                 @foreach (var answer in msg.LinkedQuestion.Answers)
                                 {
-                                    <button id="@answer.Id" @onclick="(e => ButtonClick(answer.Id))">@answer.Texte</button>
+                                    <button id="@answer.Id" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
                                 }
                             }
                             else
@@ -175,16 +175,16 @@
                 currentQuestion = q;
             }
         }
-        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Texte, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Text, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
     }
 
     private void ProcessMessage(int idQuestion)
     {
         Answer currentRep = currentQuestion.Answers.Find(r => r.Id == idQuestion);
-        Messages.Add(new Models.Message() { MessageContent = currentRep.Texte, Type = Models.Message.MessageType.UserMessage });
+        Messages.Add(new Models.Message() { MessageContent = currentRep.Text, Type = Models.Message.MessageType.UserMessage });
 
         currentQuestion = currentRep.Question;
-        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Texte, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+        Messages.Add(new Models.Message() { MessageContent = currentQuestion.Text, Type = Models.Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
     }
 
     private void KeyUp(KeyboardEventArgs e)

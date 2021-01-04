@@ -35,7 +35,7 @@ namespace Mon_Assistant_Catalys.Web.Services
             List<Question> questions = new List<Question>();
 
             //Récupération des premières questions
-            questions = questionnaire.Questions.FindAll(q => q.IdReponseParent == 0);
+            questions = questionnaire.Questions.FindAll(q => q.IdParentAnswer == 0);
 
             //Pour chacun des questionnaires, on relance le tri
             foreach (Question question in questions)
@@ -103,8 +103,8 @@ namespace Mon_Assistant_Catalys.Web.Services
                     if (answer.Question == null)
                     {
                         //Attribution de la question parente et enfante
-                        answer.Question = questionnaire.Questions.Find(q => q.IdReponseParent == answer.Id);
-                        answer.Question.QuestionPrecedente = question;
+                        answer.Question = questionnaire.Questions.Find(q => q.IdParentAnswer == answer.Id);
+                        answer.Question.PreviousQuestion = question;
 
                         //Attribution sur la question enfante
                         ConstructTree(answer.Question);
@@ -112,15 +112,15 @@ namespace Mon_Assistant_Catalys.Web.Services
                     }
                 }
                 //Si toutes les réponses ont été associées à leur question, alors retour sur l'élément parent
-                if (question.QuestionPrecedente != null)
+                if (question.PreviousQuestion != null)
                 {
-                    ConstructTree(question.QuestionPrecedente);
+                    ConstructTree(question.PreviousQuestion);
                 }
             }
             else
             {
                 //Si la question ne contient pas de réponse c'est que l'on se trouve dans le message de fin
-                ConstructTree(question.QuestionPrecedente);
+                ConstructTree(question.PreviousQuestion);
             }
         }
 
