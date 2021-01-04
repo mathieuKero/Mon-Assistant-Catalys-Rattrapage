@@ -148,7 +148,6 @@
 
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
     QuestionnaireService context = new QuestionnaireService();
-    List<Question> toDisplayQuestionnaire = new List<Question>();
 
     List<Question> toDisplayTree = null;
 
@@ -160,7 +159,7 @@
 
         toDisplayTree = new List<Question>();
 
-        toDisplayTree = context.displayTree(toDisplayQuestionnaire);
+        toDisplayTree = context.displayTree();
 
         foreach (var q in questionnaire.Questions)
         {
