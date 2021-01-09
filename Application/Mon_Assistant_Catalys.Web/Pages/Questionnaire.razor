@@ -207,17 +207,19 @@
     /// </summary>
     public void GenerateFile()
     {
-        string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString() 
-                    + "-" + DateTime.Now.Hour.ToString()  + "-" + DateTime.Now.Minute.ToString()  + "-" + DateTime.Now.Second.ToString();
+        string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString()
+                        + "-" + DateTime.Now.Hour.ToString() + "h" + DateTime.Now.Minute.ToString() + "m" + DateTime.Now.Second.ToString() + "s";
 
-        string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
+        string filePath = "Files\\Fichier_sortie-" + actualDate + ".txt";
 
         service.CreateFile(messageContent);
 
         // Téléchargement du fichier
         using (WebClient client = new WebClient())
         {
-            client.DownloadFile(filePath, @"C:\\temp\\test.txt");
+            service.CreateFolder();
+
+            client.DownloadFile(filePath, @"C:\\temp\\LCR.txt");
         }
 
     }

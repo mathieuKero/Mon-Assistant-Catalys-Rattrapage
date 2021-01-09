@@ -94,15 +94,28 @@ namespace Mon_Assistant_Catalys.Web.Services
         public void CreateFile(string fileText)
         {
             string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString()
-                        + "-" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString();
+                        + "-" + DateTime.Now.Hour.ToString() + "h" + DateTime.Now.Minute.ToString() + "m" + DateTime.Now.Second.ToString() + "s";
 
-            string path = "Files\\Fichier-sortie-" + actualDate + ".txt";
+            string path = "Files\\Fichier_sortie-" + actualDate + ".txt";
 
             using (StreamWriter file = File.CreateText(path))
             {
                 file.WriteLine(fileText);
             }
 
+        }
+
+        /// <summary>
+        ///     Création d'un dossier pour accueillir le fichier de sortie.
+        /// </summary>
+        public void CreateFolder()
+        {
+            string path = @"C:\\temp";
+
+            if(!Directory.Exists(path))
+            {
+                DirectoryInfo dir = Directory.CreateDirectory(path);
+            }
         }
 
         /// <summary>
