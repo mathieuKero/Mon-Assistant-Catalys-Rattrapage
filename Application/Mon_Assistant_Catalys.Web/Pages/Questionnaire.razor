@@ -5,31 +5,9 @@
 @using System.Net;
 
 <style type="text/css">
-    .chat-header {
-        height: 50px;
-        background-color: #343a40;
-        font-family: 'Oswald', sans-serif !important;
-        font-size: 28px;
-        color: white;
-        border-radius: 30px 30px 0px 0px;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 50px;
-    }
-
-    .bot-header {
-        padding-top: 2px;
-        height: 20px;
-        background-color: #343a40;
-        font-family: 'Oswald', sans-serif !important;
-        font-size: 11px;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-    }
 
     .chat-area {
-        height: 500px;
+        height: auto;
         background-color: #f8f9fa;
         padding: 10px 10px 10px 10px;
         overflow-x: hidden;
@@ -66,6 +44,7 @@
         text-align: left;
     }
 
+
     .user-message-container {
         float: right;
         background-color: #17a2b8;
@@ -82,7 +61,6 @@
 
     .bot-message-container {
         float: left;
-        background-color: #fd7e14;
         border-radius: 12px;
         border-bottom-left-radius: 2px;
         position: relative;
@@ -90,7 +68,6 @@
         word-wrap: break-word;
         font-size: 16px;
         color: white;
-        padding: 15px 15px 15px 15px;
         max-width: 90%
     }
 
@@ -101,10 +78,32 @@
         padding: 5px 15px;
         margin: 3px;
     }
+
+    .message-answers {
+        background-color: #C7d0d8;
+        padding: 15px 15px 15px 15px;
+        border-bottom-right-radius: 12px;
+    }
+
+    .bot-message-text {
+        background-color: #EE7813;
+        border-radius: 12px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        padding: 5px
+    }
+
+    .btn-no-limit {
+        max-width : inherit;
+        width : inherit;
+        margin-top : 5px;
+        background-color : white;
+        color : black;
+    }
+
 </style>
 
 <div class="chat-window">
-    <div class="chat-header">Questionnaire</div>
     <div class="chat-area" id="ChatBody">
         <ul class="chat-list">
             @foreach (Message msg in Messages)
@@ -113,34 +112,41 @@
                     @if (msg.Type == Message.MessageType.UserMessage)
                     {
                         <div class="user-datestamp">@msg.DateStamp</div>
-                        <div class="user-message-container"><div class="message-body">@msg.MessageContent</div></div>
+                        <div class="user-message-container">
+                            <div class="message-text">@msg.MessageContent</div>
+                        </div>
                     }
                     else
                     {
 
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
-                            <div class="message-body">@msg.MessageContent</div>
+                            <div class="bot-message-text">@msg.MessageContent</div>
 
                             @if (msg.LinkedQuestion.IsQuestionAfterAnwser())
                             {
-                                @foreach (Answer answer in msg.LinkedQuestion.Answers)
-                                {
-                                    <button id="@answer.Id" class="btn btn-outline-light" @onclick="(e => ButtonClick(answer.Id))">@answer.Text</button>
-                                }
+                                <div class="message-answers">
+                                    <div class="row">
+                                        @foreach (Answer answer in msg.LinkedQuestion.Answers)
+                                        {
+                                            <div class="col-md-12">
+                                                <button id="@answer.Id" class="btn btn-outline-light btn-no-limit" @onclick="(e => ProcessMessage(answer.Id))">@answer.Text</button>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
                             }
                             else
                             {
                                 AddMessageContent(@msg.MessageContent);
-                                <button class="btn btn-outline-light" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
                             }
 
                         </div>
 
-                        }
+                    }
                 </li>
-             }
-
+            }
         </ul>
     </div>
 </div>
@@ -185,21 +191,22 @@
 
     private void ProcessMessage(int idQuestion)
     {
-        Answer currentRep = currentQuestion.Answers.Find(r => r.Id == idQuestion);
-        Messages.Add(new Message() { MessageContent = currentRep.Text, Type = Message.MessageType.UserMessage });
+        try
+        {
+            Answer currentRep = currentQuestion.Answers.Find(r => r.Id == idQuestion);
+            Messages.Add(new Message() { MessageContent = currentRep.Text, Type = Message.MessageType.UserMessage });
 
-        currentQuestion = currentRep.Question;
-        Messages.Add(new Message() { MessageContent = currentQuestion.Text, Type = Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+            currentQuestion = currentRep.Question;
+            Messages.Add(new Message() { MessageContent = currentQuestion.Text, Type = Message.MessageType.BotMessage, LinkedQuestion = currentQuestion });
+        }
+        catch (Exception)
+        {
+        }
     }
 
     private async void ScrollChat()
     {
         await JSRuntime.InvokeAsync<string>("scrollChat");
-    }
-
-    private void ButtonClick(int idAnswer)
-    {
-        ProcessMessage(idAnswer);
     }
 
     /// <summary>
@@ -208,18 +215,16 @@
     public void GenerateFile()
     {
         string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString()
-                        + "-" + DateTime.Now.Hour.ToString() + "h" + DateTime.Now.Minute.ToString() + "m" + DateTime.Now.Second.ToString() + "s";
+                    + "-" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString();
 
-        string filePath = "Files\\Fichier_sortie-" + actualDate + ".txt";
+        string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
 
         service.CreateFile(messageContent);
 
         // Téléchargement du fichier
         using (WebClient client = new WebClient())
         {
-            service.CreateFolder();
-
-            client.DownloadFile(filePath, @"C:\\temp\\LCR.txt");
+            client.DownloadFile(filePath, @"C:\\temp\\test.txt");
         }
 
     }
