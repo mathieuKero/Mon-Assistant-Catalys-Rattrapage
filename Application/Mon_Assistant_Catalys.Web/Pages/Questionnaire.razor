@@ -3,105 +3,8 @@
 @using Mon_Assistant_Catalys.Web.Services
 @using Microsoft.AspNetCore.Components.Web
 @using System.Net;
+@using System.IO;
 
-<style type="text/css">
-
-    .chat-area {
-        height: auto;
-        background-color: #f8f9fa;
-        padding: 10px 10px 10px 10px;
-        overflow-x: hidden;
-        overflow-x: auto;
-    }
-
-    .chat-list {
-        padding: 0;
-        width: 100%;
-        list-style-type: none;
-    }
-
-    .chat-input {
-        min-height: 80px;
-        background-color: #e9ecef;
-        padding: 5px 5px 5px 5px;
-    }
-
-    .message {
-        width: 100%;
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-
-    .user-datestamp {
-        font-size: 12px;
-        width: 100%;
-        text-align: right;
-    }
-
-    .bot-datestamp {
-        font-size: 12px;
-        width: 100%;
-        text-align: left;
-    }
-
-
-    .user-message-container {
-        float: right;
-        background-color: #17a2b8;
-        border-radius: 12px;
-        border-bottom-right-radius: 2px;
-        position: relative;
-        display: inline-block;
-        word-wrap: break-word;
-        font-size: 16px;
-        color: white;
-        padding: 15px 15px 15px 15px;
-        max-width: 90%
-    }
-
-    .bot-message-container {
-        float: left;
-        border-radius: 12px;
-        border-bottom-left-radius: 2px;
-        position: relative;
-        display: inline-block;
-        word-wrap: break-word;
-        font-size: 16px;
-        color: white;
-        max-width: 90%
-    }
-
-    .btn-bot {
-        color: hotpink;
-        background-color: pink;
-        border-radius: 5px;
-        padding: 5px 15px;
-        margin: 3px;
-    }
-
-    .message-answers {
-        background-color: #C7d0d8;
-        padding: 15px 15px 15px 15px;
-        border-bottom-right-radius: 12px;
-    }
-
-    .bot-message-text {
-        background-color: #EE7813;
-        border-radius: 12px;
-        border-bottom-left-radius: 2px;
-        border-bottom-right-radius: 2px;
-        padding: 5px
-    }
-
-    .btn-no-limit {
-        max-width : inherit;
-        width : inherit;
-        margin-top : 5px;
-        background-color : white;
-        color : black;
-    }
-
-</style>
 
 <div class="chat-window">
     <div class="chat-area" id="ChatBody">
@@ -139,7 +42,9 @@
                             else
                             {
                                 AddMessageContent(@msg.MessageContent);
-                                <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                <div class="message-answers">
+                                    <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                </div>
                             }
 
                         </div>
@@ -215,9 +120,9 @@
     public void GenerateFile()
     {
         string actualDate = DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString()
-                    + "-" + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + "-" + DateTime.Now.Second.ToString();
+                    + "-" + DateTime.Now.Hour.ToString() + "h" + DateTime.Now.Minute.ToString() + "m" + DateTime.Now.Second.ToString() + "s";
 
-        string filePath = "Files\\Fichier-sortie-" + actualDate + ".txt";
+        string filePath = "Files\\Fichier_sortie-" + actualDate + ".txt";
 
         service.CreateFile(messageContent);
 
@@ -226,6 +131,8 @@
         {
             client.DownloadFile(filePath, @"C:\\temp\\test.txt");
         }
+
+        File.Delete(filePath);
 
     }
 
