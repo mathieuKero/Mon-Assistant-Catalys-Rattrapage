@@ -21,7 +21,6 @@
                     }
                     else
                     {
-
                         <div class="bot-datestamp">@msg.DateStamp</div>
                         <div class="bot-message-container">
                             <div class="bot-message-text">@msg.MessageContent</div>
@@ -30,11 +29,20 @@
                             {
                                 <div class="message-answers">
                                     <div class="row">
-                                        @foreach (Answer answer in msg.LinkedQuestion.Answers)
+                                        @if (msg.LinkedQuestion.Answers.Count == 0)
                                         {
                                             <div class="col-md-12">
-                                                <button id="@answer.Id" class="btn btn-outline-light btn-no-limit" @onclick="(e => ProcessMessage(answer.Id))">@answer.Text</button>
+                                                <button class="btn btn-outline-light btn-no-limit" @onclick="(e => RefreshProcess())">Réinitialiser le questionnaire</button>
                                             </div>
+                                        }
+                                        else
+                                        {
+                                            @foreach (Answer answer in msg.LinkedQuestion.Answers)
+                                            {
+                                                <div class="col-md-12">
+                                                    <button id="@answer.Id" class="btn btn-outline-light btn-no-limit" @onclick="(e => ProcessMessage(answer.Id))">@answer.Text</button>
+                                                </div>
+                                            }
                                         }
                                     </div>
                                 </div>
@@ -44,11 +52,10 @@
                                 AddMessageContent(@msg.MessageContent);
                                 <div class="message-answers">
                                     <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                    <button class="btn btn-outline-light btn-no-limit" @onclick="(e => RefreshProcess())">Réinitialiser le questionnaire</button>
                                 </div>
                             }
-
                         </div>
-
                     }
                 </li>
             }
@@ -61,7 +68,7 @@
     public string fileName { get; set; }
     public Guid SessionID { get; set; } = Guid.NewGuid();
     private string UserMessage { get; set; }
-    private List<Models.Message> Messages { get; set; } = new List<Models.Message>();
+    private List<Models.Message> Messages { get; set; }
 
     public Question question { get; set; }
     public Answer answer { get; set; }
@@ -71,18 +78,23 @@
     public Mon_Assistant_Catalys.Web.Models.Questionnaire questionnaire = new Mon_Assistant_Catalys.Web.Models.Questionnaire();
     QuestionnaireService service = new QuestionnaireService();
 
-    List<Question> toDisplayTree = null;
     public string messageContent = "";
+
+    List<Question> toDisplayTree;
 
     protected override void OnInitialized()
     {
+        InitializeProcess();
+    }
+
+    private void InitializeProcess()
+    {
+
+        Messages = new List<Models.Message>();
+
         question = new Question();
 
-        questionnaire = service.GetQuestionnaire();
-
-        toDisplayTree = new List<Question>();
-
-        toDisplayTree = service.TransformToTree();
+        questionnaire.Questions = service.TransformToTree();
 
         foreach (Question q in questionnaire.Questions)
         {
@@ -139,6 +151,11 @@
     public void AddMessageContent(string messageToAdd)
     {
         messageContent = messageToAdd;
+    }
+
+    public void RefreshProcess()
+    {
+        InitializeProcess();
     }
 
 }
