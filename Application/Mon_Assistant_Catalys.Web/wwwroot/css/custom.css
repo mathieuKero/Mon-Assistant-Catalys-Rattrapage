@@ -1,0 +1,186 @@
+button.btn-delete, button.btn-update {
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    background-color: #EE7813;
+    color: white;
+    border-radius: 5px;
+}
+
+button.btn-add {
+    margin-top: 20px;
+    border: 0px;
+    background-color: none;
+}
+
+button.btn-save {
+    margin-top: 20px;
+    border: 0px;
+    font-size: 20px;
+    color: white;
+    background-color: #EE7813;
+    border-radius: 5px;
+}
+
+
+.chat-area {
+    height: auto;
+    background-color: #f8f9fa;
+    padding: 10px 10px 10px 10px;
+    overflow-x: hidden;
+    overflow-x: auto;
+}
+
+.chat-list {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+.chat-input {
+    min-height: 80px;
+    background-color: #e9ecef;
+    padding: 5px 5px 5px 5px;
+}
+
+.message {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.user-datestamp {
+    font-size: 12px;
+    width: 100%;
+    text-align: right;
+}
+
+.bot-datestamp {
+    font-size: 12px;
+    width: 100%;
+    text-align: left;
+}
+
+
+.user-message-container {
+    float: right;
+    background-color: #17a2b8;
+    border-radius: 12px;
+    border-bottom-right-radius: 2px;
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: white;
+    padding: 15px 15px 15px 15px;
+    max-width: 90%
+}
+
+.bot-message-container {
+    float: left;
+    border-radius: 12px;
+    border-bottom-left-radius: 2px;
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: white;
+    max-width: 90%
+}
+
+.btn-bot {
+    color: hotpink;
+    background-color: pink;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 3px;
+}
+
+.message-answers {
+    background-color: #C7d0d8;
+    padding: 15px 15px 15px 15px;
+    border-bottom-right-radius: 12px;
+}
+
+.bot-message-text {
+    background-color: #EE7813;
+    border-radius: 12px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 5px
+}
+
+.color_orange {
+    width: 150px !important;
+    background-color: #EE7813;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold !important;
+    color: white !important;
+    border: none !important;
+}
+
+
+
+.btn-no-limit {
+    max-width: inherit;
+    width: inherit;
+    margin-top: 5px;
+    background-color: white;
+    color: black;
+}
+
+div.formulaire_admin {
+    width: 480px;
+}
+
+form {
+    width: 475px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 0 20px 20px 20px;
+    border: 1px solid;
+}
+
+legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+label {
+    width: 110px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+}
+
+input, textarea {
+    width: 249px;
+}
+
+textarea {
+    height: 100px;
+}
+
+select {
+    width: 254px;
+}
+
+#entete {
+    background-color: #EE7813;
+    height: 75px;
+}
+
+a.home {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+a.config {
+    color: white;
+}

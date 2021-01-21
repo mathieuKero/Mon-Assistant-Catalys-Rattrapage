@@ -8,51 +8,67 @@
 <!-- Page de configuration du questionnaire-->
 <div class="main">
     <div class="row">
-        <div class="col-md-7">
-
+        <div class="col-7">
             <RadzenTree Data="@toDisplayTree" Expand="@OnExpand" Change="@OnChange">
                 <RadzenTreeLevel TextProperty="Text" />
             </RadzenTree>
-
         </div>
-        <div class="col-md-5">
+        <div class="col-5">
             @if (question.IdQuestion != 0)
             {
-                <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
-                    <div class="col-12 row">
-                        <label class="col-2 font-weight-bold">Question</label>
-                        <InputText class="form-control col-10" @bind-Value="question.Text" placeholder="Contenu de la question" />
+            <EditForm Model="@question" OnValidSubmit="@SaveQuestion">
+                <div class="row">
+                    <div class="col-2">
+                        <label class="font-weight-bold">Question</label>
                     </div>
+                    <div class="col-10">
+                        <InputText class="form-control" @bind-Value="question.Text" placeholder="Contenu de la question" />
+                    </div>
+                </div>
 
-                    @if (question.Answers != null)
+                <br />
+
+                @if (question.Answers != null)
+                {
+                    <label class="font-weight-bold">Réponse</label>
+
+                    @foreach (Answer rep in question.Answers)
                     {
-                        @foreach (Answer rep in question.Answers)
-                        {
-                            <div class="col-12 row">
-                                <label class="col-2 font-weight-bold">Answer</label>
-                                <InputText class="form-control col-9" @bind-Value="@rep.Text" placeholder="Contenu de la reponse" />
-                                <input type="submit" class="form-control col-1 btn-primary" value="Suppr" />
+                        <div class="row">
+                            <span class="col-2"></span>
+                            <div class="col-9">
+                                <InputText class="form-control" @bind-Value="@rep.Text" placeholder="Contenu de la reponse" />
                             </div>
-                        }
+                            <div class="col-1">
+                                <input type="submit" class="form-control btn-primary color_orange" value="Suppr" />
+                            </div>
+                        </div>
                     }
+                }
 
-                    <br />
-                    <div class="col-12 row">
-                        <span class="col-3"></span>
-                        <input type="submit" class="form-control col-6 btn-primary" value="Ajouter une reponse" />
+                <br />
+
+                <div class="row">
+                    <span class="col-3"></span>
+                    <div class="col-9">
+                        <input type="submit" class="form-control btn-primary color_orange" value="Ajouter réponse" />
                     </div>
-                    <div class="col-12 row">
-                        <span class="col-3"></span>
-                        <input type="submit" class="form-control col-6 btn-primary" value="Sauvegarder" @onClick="OnExit"/>
+                </div>
+                <div class="row">
+                    <span class="col-3"></span>
+                    <div class="col-9">
+                        <input type="submit" class="form-control btn-primary color_orange" value="Sauvegarder"  @onClick="OnExit" />
                     </div>
-                </EditForm>
+                </div>       
+                
+            </EditForm>
+            
             }
         </div>
     </div>
 </div>
 
-@code {
-    public Question question { get; set; }
+@code { public Question question { get; set; }
     public Answer answer { get; set; }
 
     Question currentQuestion = null;
@@ -127,5 +143,4 @@
     void OnExit()
     {
         service.UpdateJsonFiles();
-    }
-}
+    } }

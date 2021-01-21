@@ -8,12 +8,6 @@ a, .btn-link {
     color: #0366d6;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
-
 app {
     position: relative;
     display: flex;
@@ -375,16 +369,6 @@ textarea {
 
 select {
     width: 254px;
-}
-
-input[type=submit] {
-    width: 150px;
-    padding: 10px;
-    background-color: #EE7813;
-    font-weight: bold;
-    border: hidden;
-    color: white;
-    border-radius: 5px;
 }
 
 #entete {

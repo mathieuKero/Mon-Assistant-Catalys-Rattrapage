@@ -4,6 +4,7 @@
 @using Microsoft.AspNetCore.Components.Web
 @using System.Net;
 @using System.IO;
+@inject IJSRuntime JSRuntime
 
 
 <div class="chat-window">
@@ -51,7 +52,7 @@
                             {
                                 AddMessageContent(@msg.MessageContent);
                                 <div class="message-answers">
-                                    <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())">Télécharger le fichier</button>
+                                    <button class="btn btn-outline-light btn-no-limit" @onclick="(e => GenerateFile())" >Télécharger le fichier</button>
                                     <button class="btn btn-outline-light btn-no-limit" @onclick="(e => RefreshProcess())">Réinitialiser le questionnaire</button>
                                 </div>
                             }
@@ -158,5 +159,9 @@
         InitializeProcess();
     }
 
+
+
 }
+
+
 
